@@ -58,6 +58,30 @@ for page_index in range(1,91):
     
         file_data["tech"] = new_list
         
+        q_list = ""
+        qCount = 1
+        while(True):
+            try:
+                cut = driver.find_element(By.XPATH, f'/html/body/div[3]/div/div[1]/div/div[1]/section[4]/div/div/div/ul/li[{qCount}]')
+                q_list += cut.text + " "
+            except:
+                break
+            qCount += 1
+        
+        file_data["qual"] = q_list
+        
+        prefer_list = ""
+        preferCount = 1
+        while(True):
+            try:
+                prefer = driver.find_element(By.XPATH, f'/html/body/div[3]/div/div[1]/div/div[1]/section[5]/div/div/div/ul/li[{preferCount}]')
+                prefer_list += prefer.text + " "
+            except:
+                break
+            preferCount += 1
+        
+        file_data["prefer"] = prefer_list
+        
         data.append(file_data)
             
 with open("merged_file.json",'w', encoding="utf-8") as outfile:

@@ -31,8 +31,6 @@ title = driver.find_element(By.CLASS_NAME, 't-content')
 
 file_data["dept"] = title.text
 
-search_box = driver.find_elements(By.TAG_NAME, 'code')
-
 new_list=[]
 while(True):
     try:

@@ -1,5 +1,6 @@
 import selenium
 import json 
+import time
 
 from selenium import webdriver
 from selenium.webdriver import ActionChains
@@ -19,17 +20,18 @@ s = Service('./chromedriver')
 
 driver = webdriver.Chrome(service=s)
 
-file_data = {}
-count = 1
+data = []
 
 for page_index in range(1,91):
     URL = f'https://programmers.co.kr/job?page={page_index}'
     for j in range(1,21):
+        file_data = {}
         driver.get(url=URL)
         driver.implicitly_wait(3)
         element = driver.find_element(By.XPATH, f'/html/body/div[3]/div/section[2]/div/ul/li[{j}]/div[2]/h5/a')
         element.click()
         
+        time.sleep(0.3)
         ### 페이지 내 긁을걸 코딩하면 된다.
         company = driver.find_element(By.CLASS_NAME, 'sub-title')
 
@@ -40,6 +42,7 @@ for page_index in range(1,91):
         file_data["dept"] = title.text
 
         new_list=[]
+        count = 1
         while(True):
             try:
                 tech = driver.find_element(By.XPATH, f'/html/body/div[3]/div/div[1]/div/div[1]/section[2]/table/tbody/tr/td/code[{count}]')
@@ -49,7 +52,10 @@ for page_index in range(1,91):
             count += 1
     
         file_data["tech"] = new_list
-
-        with open('test.json', 'w', encoding="utf-8") as make_file:
-            json.dump(file_data, make_file, ensure_ascii=False, indent="\t")
+        
+        data.append(file_data)
+            
+with open("merged_file.json",'w', encoding="utf-8") as outfile:
+  json.dump(data, outfile, ensure_ascii=False, indent="\t")
+  
 driver.close()

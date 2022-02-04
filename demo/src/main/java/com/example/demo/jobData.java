@@ -11,7 +11,6 @@ import lombok.Setter;
 @Document(collection = "dept")
 public class jobData 
 {
-	
 	@Id
     private String deptno;
     private String dname;

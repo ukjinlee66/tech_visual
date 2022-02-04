@@ -46,7 +46,7 @@
 		<!-- Dropdown Structure -->
 		
 		<!-- 유저 상태 드롭다운 메뉴 -->
-<ul id="dropdown1" class="dropdown-content">
+<!-- <ul id="dropdown1" class="dropdown-content">
 <li><a href="#"><i class="fa fa-user fa-fw"></i> My Profile</a>
 </li>
 <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
@@ -169,8 +169,8 @@
 	</li>
 	<li class="divider"></li>
 	<li>
-</ul>   
-<ul id="dropdown4" class="dropdown-content dropdown-tasks w250 taskList">
+</ul>    -->
+<!-- <ul id="dropdown4" class="dropdown-content dropdown-tasks w250 taskList">
   <li>
                                 <div>
                                     <strong>John Doe</strong>
@@ -211,9 +211,9 @@
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         </li>
-</ul>  
+</ul>  --> 
 	   <!--/. NAV TOP  -->
-        <nav class="navbar-default navbar-side" role="navigation">
+        <!-- <nav class="navbar-default navbar-side" role="navigation">
             <div class="sidebar-collapse">
                 <ul class="nav" id="main-menu">
 
@@ -272,20 +272,21 @@
 
             </div>
 
-        </nav>
+        </nav> -->
         <!-- /. NAV SIDE  -->
       
 		<div id="page-wrapper">
 		  <div class="header"> 
-                        <h1 class="page-header">
-                           프로그래머스 IT분야 채용 정보 시각화
-                        </h1>
-						<!-- <ol class="breadcrumb">
+                        <!-- <h1 class="page-header"> -->
+                        <!-- 검색박스 채워넣기. -->
+                        	<input type="text" placeholder="직무 이름 입력">
+                        	<button>검색</button>
+                        <!--</h1>
+						 <ol class="breadcrumb">
 					  <li><a href="#">Home</a></li>
 					  <li><a href="#">Dashboard</a></li>
 					  <li class="active">Data</li>
-					</ol>  -->
-									
+					</ol>  -->				
 		</div>
             <div id="page-inner">
 

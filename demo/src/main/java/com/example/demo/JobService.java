@@ -1,9 +1,9 @@
-//package com.example.demo;
-//
-//import java.util.List;
-//
-//public interface JobService 
-//{
-//	List<jobData> getJobList();
-//	List<TT> print_all_job();
-//}
+package com.example.demo;
+import java.util.List;
+
+public interface JobService 
+{
+	public String getCollectionName();
+	void setCollectionName(String collectionName);
+	public List<TT> getList();
+}

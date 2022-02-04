@@ -1,5 +1,6 @@
 package com.example.demo;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
@@ -15,7 +16,21 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
 
-
+class myComparator implements Comparator<jobData>{
+	@Override
+	public int compare(jobData first, jobData second) {
+		int firstValue = Integer.parseInt(first.getCount());
+		int secondValue = Integer.parseInt(second.getCount());
+		
+		if(firstValue > secondValue) {
+			return -1;
+		}else if(firstValue < secondValue) {
+			return 1;
+		}else {
+			return 0;
+		}
+	}
+}
 
 //RestController = View로 응답하지 않는 Controller, method의 반환결과를 json형태로 반환
 @Controller
@@ -39,9 +54,10 @@ public class mainController {
     public String getJobList(jobData jd, Model model){
     	jobService.setCollName("TT");
     	
+    	myComparator comp = new myComparator();
     	List<jobData> li = jobService.getJobList();
-    	model.addAttribute("jobList", jobService.getJobList());
-    	System.out.println("호출됨");
+    	Collections.sort(li, comp);
+    	model.addAttribute("jobList", li);
         return "index";
         
     }

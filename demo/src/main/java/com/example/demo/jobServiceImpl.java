@@ -19,16 +19,13 @@ public class jobServiceImpl implements JobService {
 	
 	private static String collName = "job";
 	
-	
 	public String getCollName() {
 		return collName;
 	}
 	
 	public void setCollName(String collName) {
-		
 		this.collName = collName;
 	}
-	
 	
 	public Optional<jobData> getJob(String id){
         

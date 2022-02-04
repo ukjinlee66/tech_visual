@@ -44,6 +44,8 @@
             </ul>
         </nav>
 		<!-- Dropdown Structure -->
+		
+		<!-- 유저 상태 드롭다운 메뉴 -->
 <ul id="dropdown1" class="dropdown-content">
 <li><a href="#"><i class="fa fa-user fa-fw"></i> My Profile</a>
 </li>
@@ -52,6 +54,7 @@
 <li><a href="#"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
 </li>
 </ul>
+
 <ul id="dropdown2" class="dropdown-content w250">
   <li>
                                 <div>
@@ -218,10 +221,10 @@
                         <a class="active-menu waves-effect waves-dark" href="index.html"><i class="fa fa-dashboard"></i> Dashboard</a>
                     </li>
                     <li>
-                        <a href="ui-elements.html" class="waves-effect waves-dark"><i class="fa fa-desktop"></i> UI Elements</a>
+                        <a href="ui-elements.jsp" class="waves-effect waves-dark"><i class="fa fa-desktop"></i> UI Elements</a>
                     </li>
 					<li>
-                        <a href="chart.html" class="waves-effect waves-dark"><i class="fa fa-bar-chart-o"></i> Charts</a>
+                        <a href="chart.jsp" class="waves-effect waves-dark"><i class="fa fa-bar-chart-o"></i> Charts</a>
                     </li>
                     <li>
                         <a href="tab-panel.html" class="waves-effect waves-dark"><i class="fa fa-qrcode"></i> Tabs & Panels</a>
@@ -275,13 +278,13 @@
 		<div id="page-wrapper">
 		  <div class="header"> 
                         <h1 class="page-header">
-                            Dashboard
+                           프로그래머스 IT분야 채용 정보 시각화
                         </h1>
-						<ol class="breadcrumb">
+						<!-- <ol class="breadcrumb">
 					  <li><a href="#">Home</a></li>
 					  <li><a href="#">Dashboard</a></li>
 					  <li class="active">Data</li>
-					</ol> 
+					</ol>  -->
 									
 		</div>
             <div id="page-inner">
@@ -299,7 +302,7 @@
 						<h3>84,198</h3> 
 						</div>
 						<div class="card-action">
-						<strong>REVENUE</strong>
+						<strong>1등 직무 양</strong>
 						</div>
 						</div>
 						</div>
@@ -316,7 +319,7 @@
 						<h3>36,540</h3> 
 						</div>
 						<div class="card-action">
-						<strong>SALES</strong>
+						<strong>2등 직무 양</strong>
 						</div>
 						</div>
 						</div> 
@@ -332,7 +335,7 @@
 						<h3>24,225</h3> 
 						</div>
 						<div class="card-action">
-						<strong>PRODUCTS</strong>
+						<strong>3등 직무 양</strong>
 						</div>
 						</div>
 						</div> 
@@ -349,7 +352,7 @@
 						<h3>88,658</h3> 
 						</div>
 						<div class="card-action">
-						<strong>VISITS</strong>
+						<strong>4등 직무</strong>
 						</div>
 						</div>
 						</div> 
@@ -411,7 +414,7 @@
 					
 		 
 				<div class="row">
-				<div class="col-md-5"> 
+				<!-- <div class="col-md-5"> 
 						<div class="card">
 						<div class="card-image">
 						 <div id="morris-line-chart"></div>
@@ -421,9 +424,10 @@
 						</div>
 						</div>
 		  
-					</div>		
+					</div> -->		
 					
-						<div class="col-md-7"> 
+					<!-- 막대그래프 -->
+					<div class="col-md-7"> 
 					<div class="card">
 					<div class="card-image">
 					  <div id="morris-bar-chart"></div>
@@ -438,7 +442,7 @@
 			 
 				
 				
-                <div class="row">
+                <!-- <div class="row">
                     <div class="col-xs-12">
 						<div class="card">
 					<div class="card-image">
@@ -450,12 +454,12 @@
 					</div>	 
                     </div> 
 
-                </div>
-				<div class="row">
+                </div> -->
+				<!-- <div class="row">
 				<div class="col-md-12">
 				
 					</div>		
-				</div> 	
+				</div>  -->	
                 <!-- /. ROW  -->
 
 	   
@@ -463,7 +467,7 @@
 				
 				
                 <div class="row">
-                    <div class="col-md-4 col-sm-12 col-xs-12">
+                    <!-- <div class="col-md-4 col-sm-12 col-xs-12">
 						<div class="card"><div class="card-action">
 					  <b>Tasks Panel</b>
 					</div>
@@ -482,17 +486,17 @@
 					
 					</div>	  
 
-                    </div>
+                    </div> -->
                     <div class="col-md-8 col-sm-12 col-xs-12">
 	<div class="card">
 	<div class="card-action">
-					  <b>User List</b>
+					  <b>자격요건, 우대사항 랭킹</b>
 					</div>
 					<div class="card-image">
 					  <ul class="collection">
     <li class="collection-item avatar">
       <i class="material-icons circle green">track_changes</i>
-      <span class="title">Title</span>
+      <span class="title">1등</span>
       <p>First Line <br>
          Second Line
       </p>
@@ -500,7 +504,7 @@
     </li>
     <li class="collection-item avatar">
       <i class="material-icons circle">folder</i>
-      <span class="title">Title</span>
+      <span class="title">2등</span>
       <p>First Line <br>
          Second Line
       </p>
@@ -508,7 +512,7 @@
     </li>
     <li class="collection-item avatar">
       <i class="material-icons circle green">track_changes</i>
-      <span class="title">Title</span>
+      <span class="title">3등</span>
       <p>First Line <br>
          Second Line
       </p>
@@ -516,7 +520,7 @@
     </li>
     <li class="collection-item avatar">
       <i class="material-icons circle red">play_arrow</i>
-      <span class="title">Title</span>
+      <span class="title">4등</span>
       <p>First Line <br>
          Second Line
       </p>
@@ -531,6 +535,7 @@
                     </div>
                 </div>
                 <!-- /. ROW  -->
+              <!-- 오른쪽 하단 원 작은메뉴 -->
 			   <div class="fixed-action-btn horizontal click-to-toggle">
     <a class="btn-floating btn-large red">
       <i class="material-icons">menu</i>
@@ -543,11 +548,11 @@
     </ul>
   </div>
 		
-				<footer><p>Shared by <i class="fa fa-love"></i><a href="https://bootstrapthemes.co">BootstrapThemes</a>
+				<!-- <footer><p>Shared by <i class="fa fa-love"></i><a href="https://bootstrapthemes.co">BootstrapThemes</a>
 </p>
 				
         
-				</footer>
+				</footer> -->
             </div>
             <!-- /. PAGE INNER  -->
         </div>

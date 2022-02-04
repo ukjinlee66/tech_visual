@@ -23,13 +23,8 @@
 		</dependency> -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-mongodb</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
@@ -40,7 +35,6 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>jstl</artifactId>
@@ -50,7 +44,24 @@
 			<artifactId>tomcat-embed-jasper</artifactId>
 			<scope>provided</scope>
 		</dependency>
-		
+		<!-- MONGODB -->
+		<dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-mongodb</artifactId>
+        </dependency>
+		<!-- MongoDB Driver --> 
+		  <!--<dependency> 
+		     <groupId>org.mongodb</groupId> 
+		     <artifactId>mongo-java-driver</artifactId> 
+		     <version>3.2.2</version> 
+		  </dependency> 
+		   
+		   MongoDB Spring 
+		   <dependency> 
+		      <groupId>org.springframework.data</groupId> 
+		      <artifactId>spring-data-mongodb</artifactId> 
+		      <version>1.9.1.RELEASE</version> 
+		   </dependency>-->
 	</dependencies>
 
 	<build>

@@ -72,14 +72,14 @@
             Morris.Donut({
                 element: 'morris-donut-chart',
                 data: [{
-                    label: "Profits",
-                    value: 12
+                    label: "a",
+                    value: 200
                 }, {
-                    label: "Users",
-                    value: 30
+                    label: "b",
+                    value: 45
                 }, {
-                    label: "Total Sales",
-                    value: 20
+                    label: "c",
+                    value: 350
                 }],
 				   colors: [
     '#A6A6A6','#414e63',

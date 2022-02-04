@@ -1,38 +1,70 @@
 package com.example.demo;
 
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.SessionAttributes;
 
 
 
 
 //RestController = View로 응답하지 않는 Controller, method의 반환결과를 json형태로 반환
-@RestController
+@Controller
 //“/main”으로 들어오는 모든 요청에 대한 처리를 해당 클래스에서 한다는 것을 의미
-@RequestMapping("/main")
+@SessionAttributes("test")
 public class mainController {
 	
 	@Autowired
 	private JobService jobService;
 	
 	
-	
+	@GetMapping("/")
+	public String mainPage() {
+		
+		System.out.println("start");
+		return "index";
+	}
 	
 	//요청 URL을 어떤 method가 처리할지 mapping (Get,Post)
-	@RequestMapping(method = RequestMethod.GET)
-    List<jobData> getJobList(){
-    	
+	@RequestMapping(value="/jobListfind")
+    public String getJobList(jobData jd, Model model){
     	jobService.setCollName("TT");
     	
-        return jobService.getJobList();
+    	List<jobData> li = jobService.getJobList();
+    	model.addAttribute("jobList", jobService.getJobList());
+    	System.out.println("호출됨");
+        return "index";
         
     }
-    
-    
-    
+//	@RequestMapping(value="/topTech")
+//	public String getTopTech(jobData jd, Model model) {
+//		
+//		jobService.setCollName("TT");
+//		
+//		List<jobData> techlist = jobService.getJobList();
+////		Arrays.sort(techlist, new Comparator<jobData>() {
+////			@Override
+////			public int compare(jobData a1, jobData a2) {
+////				return a2 - a1;
+////			}
+////			
+////			
+////		});
+//		System.out.println("techlist");
+//		
+//		
+//	}
 
+    
 }
+
+

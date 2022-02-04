@@ -1,17 +1,16 @@
 package com.example.demo;
 import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 @Service
-@Component("jobRepository")
-public class jobRepositoryCustomimpl implements JobService
+@Component("enRepository")
+public class enRepositoryCustomimpl implements enService
 {
-	private static String collectionName = "total";
+	private static String collectionName = "entire";
 	@Autowired
-	private jobRepositoryCustom jcon2;
+	private enRepositoryCustom jcon2;
 	
 	@Override
 	public String getCollectionName()
@@ -26,10 +25,9 @@ public class jobRepositoryCustomimpl implements JobService
 	}
 	
 	@Override
-	public List<TT> getList()
+	public List<Notice> getList()
 	{
-		List<TT> li = jcon2.findAll();
-		//List<TT> li = jcon2.findByFirstnameRegex(collectionName);
+		List<Notice> li = jcon2.findAll();
 		return li;
 	}
 }

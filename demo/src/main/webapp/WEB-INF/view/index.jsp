@@ -22,7 +22,7 @@
 </head>
 
 <body>
-    <div id="wrapper">
+    <!-- <div id="wrapper">
         <nav class="navbar navbar-default top-navbar" role="navigation">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle waves-effect waves-dark" data-toggle="collapse" data-target=".sidebar-collapse">
@@ -42,9 +42,9 @@
 				<li><a class="dropdown-button waves-effect waves-dark" href="#!" data-activates="dropdown2"><i class="fa fa-bell fa-fw"></i> <i class="material-icons right">arrow_drop_down</i></a></li>
 				  <li><a class="dropdown-button waves-effect waves-dark" href="#!" data-activates="dropdown1"><i class="fa fa-user fa-fw"></i> <b>John Doe</b> <i class="material-icons right">arrow_drop_down</i></a></li>
             </ul>
-        </nav>
+        </nav> -->
 		<!-- Dropdown Structure -->
-<ul id="dropdown1" class="dropdown-content">
+<!-- <ul id="dropdown1" class="dropdown-content">
 <li><a href="#"><i class="fa fa-user fa-fw"></i> My Profile</a>
 </li>
 <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
@@ -99,8 +99,8 @@
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         </li>
-</ul>
-<ul id="dropdown3" class="dropdown-content dropdown-tasks w250">
+</ul> -->
+<!-- <ul id="dropdown3" class="dropdown-content dropdown-tasks w250">
 <li>
 		<a href="#">
 			<div>
@@ -208,8 +208,11 @@
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         </li>
-</ul>  
+</ul>   -->
 	   <!--/. NAV TOP  -->
+	   	<div>
+	   		<input type="text" name="Search" id="Search" >
+	   	</div>
         <nav class="navbar-default navbar-side" role="navigation">
             <div class="sidebar-collapse">
                 <ul class="nav" id="main-menu">
@@ -278,9 +281,10 @@
                             Dashboard
                         </h1>
 						<ol class="breadcrumb">
-					  <li><a href="#">Home</a></li>
-					  <li><a href="#">Dashboard</a></li>
-					  <li class="active">Data</li>
+					  <li>
+					  <input width="100%">
+					  <button> 검색</button>
+					  </li>
 					</ol> 
 									
 		</div>
@@ -409,7 +413,7 @@
 						</div><!--/.row-->
 					</div>
 					
-		 
+		 <!-- 
 				<div class="row">
 				<div class="col-md-5"> 
 						<div class="card">
@@ -421,7 +425,7 @@
 						</div>
 						</div>
 		  
-					</div>		
+					</div>		 -->
 					
 						<div class="col-md-7"> 
 					<div class="card">
@@ -438,7 +442,7 @@
 			 
 				
 				
-                <div class="row">
+            <!--     <div class="row">
                     <div class="col-xs-12">
 						<div class="card">
 					<div class="card-image">
@@ -450,7 +454,7 @@
 					</div>	 
                     </div> 
 
-                </div>
+                </div> -->
 				<div class="row">
 				<div class="col-md-12">
 				

@@ -13,8 +13,7 @@ public interface jobRepository extends MongoRepository<jobData,String> {
 	
 	public List<jobData> findAll();
 	
-	//public List<jobData> findSort();
-	
-
-
+	//public List<jobData> findSort();	
 }
+
+

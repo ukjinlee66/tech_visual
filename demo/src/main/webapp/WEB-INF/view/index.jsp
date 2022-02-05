@@ -278,12 +278,14 @@
 		<div id="page-wrapper">
 		  <div class="header"> 
                         <h1 class="page-header">
-                           ${jobList}
+                           ${jobList[0].word} 
                         </h1>
 						<ol class="breadcrumb">
 					  <li>
-					  <input width="100%">
-					  <button> 검색</button>
+					  <form method="GET" action="${pageContext.request.contextPath}/List">
+					  <input width="100%" name="search">
+					  <button type="submit"> 검색</button>
+					  </form>
 					  </li>
 					</ol> 
 									
@@ -300,10 +302,10 @@
 						</div>
 						<div class="card-stacked red">
 						<div class="card-content">
-						<h3>84,198</h3> 
+						<h3>${test[0].count}</h3> 
 						</div>
 						<div class="card-action">
-						<strong>REVENUE</strong>
+						<strong>${test[0].word}</strong>
 						</div>
 						</div>
 						</div>
@@ -317,10 +319,10 @@
 						</div>
 						<div class="card-stacked orange">
 						<div class="card-content">
-						<h3>36,540</h3> 
+						<h3>${test[1].count}</h3> 
 						</div>
 						<div class="card-action">
-						<strong>SALES</strong>
+						<strong>${test[1].word}</strong>
 						</div>
 						</div>
 						</div> 
@@ -333,10 +335,10 @@
 						</div>
 						<div class="card-stacked blue">
 						<div class="card-content">
-						<h3>24,225</h3> 
+						<h3>${test[2].count}</h3> 
 						</div>
 						<div class="card-action">
-						<strong>PRODUCTS</strong>
+						<strong>${test[2].word}</strong>
 						</div>
 						</div>
 						</div> 
@@ -350,10 +352,10 @@
 						</div>
 						<div class="card-stacked green">
 						<div class="card-content">
-						<h3>88,658</h3> 
+						<h3>${test[3].count}</h3> 
 						</div>
 						<div class="card-action">
-						<strong>VISITS</strong>
+						<strong>${test[3].word}</strong>
 						</div>
 						</div>
 						</div> 

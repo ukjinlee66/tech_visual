@@ -369,7 +369,7 @@
 						  	<div class="row">
 								<div class="col-xs-12 col-sm-6 col-md-6"> 
 										<div class="card-panel text-center">
-											<h4>${deptName}의 전체 공고에서의 비율 ${deptVal}</h4>
+											<h4>${deptName}의 전체 공고에서의 비율 ${deptVal}%</h4>
 											<div class="easypiechart" id="easypiechart-blue" data-percent=${deptVal} ><span class="percent">${deptVal}%</span>
 											</div> 
 										</div>

@@ -11,6 +11,7 @@ public class enumTest
 	@AllArgsConstructor
 	public enum SearchEx1 
 	{
+		DE("데이터 엔지니어"),
 		SB("서버/백엔드"),
 		FR("프론트엔드"),
 		PU("웹 풀스택"),
@@ -18,7 +19,6 @@ public class enumTest
 		IOS("아이폰 앱"),
 		ML("머신러닝"),
 		AI("인공지능(AI)"),
-		DE("데이터 엔지니어"),
 		MG("모바일 게임"),
 		GC("게임 클라이언트"),
 		GS("게임 서버"),
@@ -32,21 +32,16 @@ public class enumTest
 		EX("응용 프로그램"),
 		BC("블록체인");
 		private String DBname;
-
-		String getDBCode(String collectionName) {
-			// TODO Auto-generated method stub
-			return null;
-		}
 	}
 	public static String getDBCode(String search_key) 
 	{
-		for (SearchEx1 name : SearchEx1.values()) {
+		for (SearchEx1 name : SearchEx1.values()) 
+		{
 			System.out.println(name.getDBname());
-			if(name.getDBname().equals(search_key)) {
+			if(name.getDBname().equals(search_key)) 
+			{
 				return name.toString();
 			}
-			System.out.println(name.getDBname());
-			return name.toString();
 		} 
 		return null; 
 	}

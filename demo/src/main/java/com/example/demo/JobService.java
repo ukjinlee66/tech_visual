@@ -5,20 +5,12 @@ import java.util.Optional;
 
 public interface JobService {
 	
-	
-	
+
+	public String getCollectionName();
+	void setCollectionName(String collectionName);
 	List<jobData> getJobList();
-	
-	//List<jobData> getJobListSort();
-	
-	Optional<jobData> getJob(String id);
-	
 	String getCollName();
-
-	void setCollName(String collName);
-	
-	
-
+	List<Notice> getdeptList(String dept);
 
 
 }

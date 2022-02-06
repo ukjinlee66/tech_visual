@@ -121,16 +121,16 @@
 					  <div class="collection">
 					  	<table>
 						  	<tr>
-							  	 <td><a href="#!" class="collection-item">${qualList[0].word}<span class="new badge red" data-badge-caption="st">1</span></a></td>
-							  	 <td><a href="#!" class="collection-item">${qualList[0].word}<span class="new badge red" data-badge-caption="st">1</span></a></td>
+							  	 <td><a href="#!" class="collection-item">${sessionTQ[0].word}<span class="new badge red" data-badge-caption="st">1</span></a></td>
+							  	 <td><a href="#!" class="collection-item">${sessionTP[0].word}<span class="new badge red" data-badge-caption="st">1</span></a></td>
 						  	</tr>
 						  	<tr>
-							  	 <td><a href="#!" class="collection-item">${qualList[1].word}<span class="badge" data-badge-caption="nd">2</span></a></td>
-							  	 <td><a href="#!" class="collection-item">${qualList[1].word}<span class="badge" data-badge-caption="nd">2</span></a></td>
+							  	 <td><a href="#!" class="collection-item">${sessionTQ[1].word}<span class="badge" data-badge-caption="nd">2</span></a></td>
+							  	 <td><a href="#!" class="collection-item">${sessionTP[1].word}<span class="badge" data-badge-caption="nd">2</span></a></td>
 						  	</tr>
 						  	<tr>
-							  	 <td><a href="#!" class="collection-item">${qualList[2].word}<span class="new badge" data-badge-caption="rd">3</span></a></td>
-							  	 <td><a href="#!" class="collection-item">${qualList[2].word}<span class="new badge" data-badge-caption="rd">3</span></a></td>
+							  	 <td><a href="#!" class="collection-item">${sessionTQ[2].word}<span class="new badge" data-badge-caption="rd">3</span></a></td>
+							  	 <td><a href="#!" class="collection-item">${sessionTP[2].word}<span class="new badge" data-badge-caption="rd">3</span></a></td>
 						  	</tr>
 						</table>
 						</div>
@@ -167,29 +167,29 @@
 						  	<div class="row">
 								<div class="col-xs-12 col-sm-6 col-md-6"> 
 										<div class="card-panel text-center">
-											<h4>Profit</h4>
-											<div class="easypiechart" id="easypiechart-blue" data-percent="82" ><span class="percent">82%</span>
+											<h4>${deptName}의 전체 공고에서의 비율 ${deptVal}%</h4>
+											<div class="easypiechart" id="easypiechart-blue" data-percent=${deptVal} ><span class="percent">${deptVal}%</span>
 											</div> 
 										</div>
 								</div>
 								<div class="col-xs-12 col-sm-6 col-md-6"> 
 										<div class="card-panel text-center">
-											<h4>No. of Visits</h4>
-											<div class="easypiechart" id="easypiechart-red" data-percent="46" ><span class="percent">46%</span>
+											<h4>${tech_one_name}</h4>
+											<div class="easypiechart" id="easypiechart-red" data-percent=${tech_one} ><span class="percent">${tech_one}%</span>
 											</div>
 										</div>
 								</div>
 								<div class="col-xs-12 col-sm-6 col-md-6"> 
 										<div class="card-panel text-center">
-											<h4>Customers</h4>
-											<div class="easypiechart" id="easypiechart-teal" data-percent="84" ><span class="percent">84%</span>
+											<h4>${tech_two_name}</h4>
+											<div class="easypiechart" id="easypiechart-teal" data-percent=${tech_two} ><span class="percent">${tech_two}%</span>
 											</div> 
 										</div>
 								</div>
 								<div class="col-xs-12 col-sm-6 col-md-6"> 
 										<div class="card-panel text-center">
-											<h4>Sales</h4>
-											<div class="easypiechart" id="easypiechart-orange" data-percent="55" ><span class="percent">55%</span>
+											<h4>${tech_three_name}</h4>
+											<div class="easypiechart" id="easypiechart-orange" data-percent=${tech_three}"><span class="percent">${tech_three}%</span>
 											</div>
 										</div>
 								</div>  
@@ -245,13 +245,25 @@
 										</div> 
 										<div class="card-action">
 										  <b>Donut Chart Example</b>
+										  <script language=javascript>
 										  
+										  var WE2 = '${exep[0].word}';
+										  var WE3 = '${exep[1].word}';
+										  var WE4 = '${exep[2].word}';
+										  var WE5 = '${exep[3].word}';
+										  
+										  var CE1 = ${exepZero};
+										  var CE2 = '${exep[0].count}';
+										  var CE3 = '${exep[1].count}';
+										  var CE4 = '${exep[2].count}';
+										  var CE5 = '${exep[3].count}'; 
+										  </script>
 										</div>
 									</div>	
 								</div>
 							 </div> 
 						</div><!--/.row-->
-					</div>
+					
 					 
 		  
 				<!-- <div class="row">
@@ -265,7 +277,7 @@
 						</div>
 						</div>
 		  
-					</div>
+					</div> -->
 					
 				 <div class="col-md-7"> 
 					<div class="card">
@@ -276,8 +288,8 @@
 					  <b> Bar Chart Example</b>
 					</div>
 					</div>					
-					</div>  -->
-					
+					</div> 
+				</div>
 				
 			 
 				

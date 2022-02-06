@@ -79,18 +79,24 @@
             Morris.Donut({
                 element: 'morris-donut-chart',
                 data: [{
-                    label: "Profits",
-                    value: 10
+                    label: "경력무관",
+                    value: CE1
                 }, {
-                    label: "Users",
-                    value: 30
+                    label: WE2+"년 이상",
+                    value: CE2
                 }, {
-                    label: "Total Sales",
-                    value: 20
+                    label: WE3+"년 이상",
+                    value: CE3
+                }, {
+                    label: WE4+"년 이상",
+                    value: CE4
+                }, {
+                    label: WE5+"년 이상",
+                    value: CE5
                 }],
 				   colors: [
     '#A6A6A6','#414e63',
-    '#e96562' 
+    '#e96562','#414e63','#e96562' 
   ],
                 resize: true
             });

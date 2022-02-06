@@ -312,7 +312,8 @@ var EasyPieChart = function(el, opts) {
 	 * @param  {number} newValue Number between 0 and 100
 	 * @return {object}          Instance of the plugin for method chaining
 	 */
-	this.update = function(newValue) {
+	this.update = function(newValue) 
+	{
 		newValue = parseFloat(newValue);
 		if (options.animate.enabled) {
 			this.renderer.animate(currentValue, newValue);

@@ -369,8 +369,8 @@
 						  	<div class="row">
 								<div class="col-xs-12 col-sm-6 col-md-6"> 
 										<div class="card-panel text-center">
-											<h4>size : ${deptVal}</h4>
-											<div class="easypiechart" id="easypiechart-blue" data-percent="82" ><span class="percent">82%</span>
+											<h4>${deptName}의 전체 공고에서의 비율 ${deptVal}</h4>
+											<div class="easypiechart" id="easypiechart-blue" data-percent=${deptVal} ><span class="percent">${deptVal}%</span>
 											</div> 
 										</div>
 								</div>
@@ -396,7 +396,7 @@
 										</div>
 								</div>  
 							</div>
-						</div>							
+					</div>							
 						</div><!--/.row-->
 						<div class="col-xs-12 col-sm-12 col-md-5"> 
 						     <div class="row">
@@ -428,7 +428,7 @@
 		  
 					</div>		 -->
 					
-						<div class="col-md-7"> 
+							<div class="col-md-7"> 
 					<div class="card">
 					<div class="card-image">
 					  <div id="morris-bar-chart"></div>
@@ -436,7 +436,7 @@
 					<div class="card-action">
 					  <b> Bar Chart Example</b>
 					</div>
-					</div>					
+					</div>
 					</div>
 					
 				</div> 

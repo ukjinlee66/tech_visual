@@ -26,9 +26,9 @@
             Morris.Bar({
                 element: 'morris-bar-chart',
                 data: [{
-                    y: '2006',
-                    a: 100,
-                    b: 90
+                    y: '2123',
+                    a: 1,
+                    b: 900
                 }, {
                     y: '2007',
                     a: 75,
@@ -45,14 +45,6 @@
                     y: '2010',
                     a: 50,
                     b: 40
-                }, {
-                    y: '2011',
-                    a: 75,
-                    b: 65
-                }, {
-                    y: '2012',
-                    a: 100,
-                    b: 90
                 }],
                 xkey: 'y',
                 ykeys: ['a', 'b'],
@@ -72,14 +64,14 @@
             Morris.Donut({
                 element: 'morris-donut-chart',
                 data: [{
-                    label: "a",
-                    value: 200
+                    label: "Profits",
+                    value: 12
                 }, {
-                    label: "b",
-                    value: 45
+                    label: "Users",
+                    value: 30
                 }, {
-                    label: "c",
-                    value: 350
+                    label: "Total Sales",
+                    value: 20
                 }],
 				   colors: [
     '#A6A6A6','#414e63',

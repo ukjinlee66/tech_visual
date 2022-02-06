@@ -1,21 +1,17 @@
 package com.example.demo;
 
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.SessionAttributes;
+
+import com.example.demo.enumTest.SearchEx1;
 
 
 //요청 URL을 어떤 method가 처리할지 mapping (Get,Post)
@@ -60,17 +56,16 @@ public class mainController {
   	//session에 저장
   	model.addAttribute("test",tt_list);
   	//model.addAttribute("dsize",);
-  	
-  	
-  	String str = jobService.getCollectionName();
-	System.out.println("str : " + str);
-  	List<Notice> li = econ.findBydept("프론트엔드"); // mapping 함수사용.
+  	enumTest db = null;
+  	String str = db.getDBCode(jobService.getCollectionName());
+  	List<Notice> li = econ.findBydept(str); // mapping 함수사용.
   	int size = li.size();
-  	model.addAttribute("deptVal", size);
+  	List<Notice> li2 = econ.findAll(); // 전체 공고.
+  	System.out.println(size + " " + li2.size() + " ");
+  	model.addAttribute("deptVal", (size*100)/li2.size());
+  	model.addAttribute("deptName", str); // 현재 해당 직무 이름.(맵핑이후)
   	
-  	
-		System.out.println("main 호출");
-		return "index";
+  	return "index";
 	}
 	
 	//요청 URL을 어떤 method가 처리할지 mapping (Get,Post)

@@ -281,8 +281,8 @@
                         </h1>
 						<ol class="breadcrumb">
 					  <li>
-					  <form method="GET" action="${pageContext.request.contextPath}/List">
-					  <input width="100%" name="search">
+					  <form method="GET" action="/search">
+					  <input width="100%" name="search"/>
 					  <button type="submit"> 검색</button>
 					  </form>
 					  </li>

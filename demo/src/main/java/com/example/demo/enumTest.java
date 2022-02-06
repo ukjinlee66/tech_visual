@@ -43,10 +43,10 @@ public class enumTest
 		for (SearchEx1 name : SearchEx1.values()) {
 			System.out.println(name.getDBname());
 			if(name.getDBname().equals(search_key)) {
-				return name.getDBname();
+				return name.toString();
 			}
 			System.out.println(name.getDBname());
-			return name.getDBname();
+			return name.toString();
 		} 
 		return null; 
 	}

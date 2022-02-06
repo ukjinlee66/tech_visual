@@ -15,7 +15,7 @@ import org.springframework.stereotype.Service;
 @Component("job")
 public class jobServiceImpl implements JobService 
 {
-	private static String collectionName = "total";
+	private static String collectionName = "DE";
 	
 	@Autowired
 	private jobRepositoryCustom jcon2;
@@ -26,7 +26,7 @@ public class jobServiceImpl implements JobService
 	@Autowired
     private jobRepository jRepository;
 	
-	private static String collName = "job";
+	private static String collName = "DE";
 	
 	
 	public String getCollName() {

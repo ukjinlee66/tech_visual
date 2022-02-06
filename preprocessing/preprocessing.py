@@ -4,7 +4,7 @@ from konlpy.tag import Okt
 import re
 # nltk.download('all')    # 최소 한번 실행해야 함
 okt = Okt()
-fname = 'GC'
+fname = 'total'
 korean = re.compile('[\u3131-\u3163\uac00-\ud7a3]+')   # 한글 제거
 
 text_file_path = f'/Users/lyk/Downloads/word_count/{fname}.txt'    # txt 파일 위치
@@ -35,6 +35,15 @@ with open(text_file_path,'r',encoding='utf-8') as f:
           continue
         m.setdefault(english,0)
         m[english]+=int(li[len(li)-1])
+
+
+rev = sorted(m.items(), reverse=True, key=lambda item: item[1])
+
+m = []
+
+for word, count in rev:
+  temp={'word':word, 'count':count}
+  m.append(temp)
 
 with open(f"/Users/lyk/Downloads/word_count to json/{fname}.json",'w', encoding="utf-8") as outfile:
    json.dump(m, outfile, ensure_ascii=False, indent="\t")

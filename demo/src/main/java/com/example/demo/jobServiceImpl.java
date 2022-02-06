@@ -18,7 +18,7 @@ public class jobServiceImpl implements JobService {
 	@Autowired
     private jobRepository jRepository;
 	
-	private static String collName = "job";
+	private static String collName = "DE";
 	
 	
 	public String getCollName() {

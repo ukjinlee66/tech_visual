@@ -4,8 +4,13 @@
     http://creativecommons.org/licenses/by/3.0/
 ---------------------------------------------------------  */
 
+
+
 (function ($) {
     "use strict";
+   
+    
+    
     var mainApp = {
 
         initFunction: function () {
@@ -26,9 +31,9 @@
             Morris.Bar({
                 element: 'morris-bar-chart',
                 data: [{
-                    y: '2006',
-                    a: 100,
-                    b: 90
+                    y: '1111',
+                    a: 11,
+                    b: 11
                 }, {
                     y: '2007',
                     a: 75,
@@ -67,13 +72,15 @@
 	 
 
 
+
             /* MORRIS DONUT CHART
 			----------------------------------------*/
+			
             Morris.Donut({
                 element: 'morris-donut-chart',
                 data: [{
                     label: "Profits",
-                    value: 12
+                    value: 10
                 }, {
                     label: "Users",
                     value: 30

@@ -35,8 +35,10 @@
 					
 					<div class="col-xs-12 col-sm-6 col-md-3">
 						<div class="card horizontal cardIcon waves-effect waves-dark">
+						
 						<div class="card-image red">
-						<i class="material-icons dp48">import_export</i>
+						<i class="material-icons dp48"><iframe src="assets/img/java.svg"  style="width:100%; height: 60px; border: 0"></iframe></i>
+						<img src= "assets/img/bg-img.jpg">
 						</div>
 						<div class="card-stacked red">
 						<div class="card-content">
@@ -54,7 +56,7 @@
 					
 						<div class="card horizontal cardIcon waves-effect waves-dark">
 						<div class="card-image orange">
-						<i class="material-icons dp48">shopping_cart</i>
+						<i class="material-icons dp48"><iframe src="assets/img/javascript.svg"  style="width:100%; height: 60px; border: 0"></iframe></i>
 						</div>
 						<div class="card-stacked orange">
 						<div class="card-content">
@@ -71,7 +73,7 @@
 					
 						<div class="card horizontal cardIcon waves-effect waves-dark">
 						<div class="card-image blue">
-						<i class="material-icons dp48">equalizer</i>
+						<i class="material-icons dp48"><iframe src="assets/img/python.svg"  style="width:100%; height: 60px; border: 0"></iframe></i>
 						</div>
 						<div class="card-stacked blue">
 						<div class="card-content">
@@ -88,7 +90,7 @@
                     
 					<div class="card horizontal cardIcon waves-effect waves-dark">
 						<div class="card-image green">
-						<i class="material-icons dp48">supervisor_account</i>
+						<i class="material-icons dp48"><iframe src="assets/img/amazonaws.svg"  style="width:100%; height: 60px; border: 0"></iframe></i>
 						</div>
 						<div class="card-stacked green">
 						<div class="card-content">
@@ -144,6 +146,7 @@
 		
 		  <div> 
                         <h1 class="page-header">
+                        
                            ${searchList[0].word} 
                         </h1>
 						<ol class="breadcrumb">
@@ -211,23 +214,23 @@
 					  	<table>
 						  	<tr>
 							  	 <td><a href="#!" class="collection-item">${qualList[0].word}<span class="new badge red" data-badge-caption="st">1</span></a></td>
-							  	 <td><a href="#!" class="collection-item">${qualList[0].word}<span class="new badge red" data-badge-caption="st">1</span></a></td>
+							  	 <td><a href="#!" class="collection-item">${prefList[0].word}<span class="new badge red" data-badge-caption="st">1</span></a></td>
 						  	</tr>
 						  	<tr>
 							  	 <td><a href="#!" class="collection-item">${qualList[1].word}<span class="badge" data-badge-caption="nd">2</span></a></td>
-							  	 <td><a href="#!" class="collection-item">${qualList[1].word}<span class="badge" data-badge-caption="nd">2</span></a></td>
+							  	 <td><a href="#!" class="collection-item">${prefList[1].word}<span class="badge" data-badge-caption="nd">2</span></a></td>
 						  	</tr>
 						  	<tr>
 							  	 <td><a href="#!" class="collection-item">${qualList[2].word}<span class="new badge" data-badge-caption="rd">3</span></a></td>
-							  	 <td><a href="#!" class="collection-item">${qualList[2].word}<span class="new badge" data-badge-caption="rd">3</span></a></td>
+							  	 <td><a href="#!" class="collection-item">${prefList[2].word}<span class="new badge" data-badge-caption="rd">3</span></a></td>
 						  	</tr>
 						  	<tr>
 							  	 <td><a href="#!" class="collection-item">${qualList[3].word}<span class="new badge blue" data-badge-caption="th">4</span></a></td>
-							  	 <td><a href="#!" class="collection-item">${qualList[3].word}<span class="new badge blue" data-badge-caption="th">4</span></a></td>
+							  	 <td><a href="#!" class="collection-item">${prefList[3].word}<span class="new badge blue" data-badge-caption="th">4</span></a></td>
 						  	</tr>
 						  	<tr>
 							  	 <td><a href="#!" class="collection-item">${qualList[4].word}<span class="new badge red" data-badge-caption="th">5</span></a></td>
-							  	 <td><a href="#!" class="collection-item">${qualList[4].word}<span class="new badge red" data-badge-caption="th">5</span></a></td>
+							  	 <td><a href="#!" class="collection-item">${prefList[4].word}<span class="new badge red" data-badge-caption="th">5</span></a></td>
 						  	</tr>
 					  	</table>
 						</div>
@@ -286,6 +289,26 @@
 					</div> 
 					<div class="card-action">
 					  <b> Bar Chart Example</b>
+					  
+					  <script language=javascript> 
+						  var fCount1 = ${firG[0].count};
+						  var fCount2 = ${firG[1].count};
+						  var fWord1 = '${firG[0].word}';
+						  var fWord2 = '${firG[1].word}';
+						  var sCount1 = ${SecF[0].count};
+						  var sCount2 = ${SecS[0].count};
+						  var tCount1 = ${ThF[0].count};
+						  var tCount2 = ${ThS[0].count};
+						  var foCount1 = ${FoF[0].count};
+						  var foCount2 = ${FoS[0].count};
+						  var fiCount1 = ${FiF[0].count};
+						  var fiCount2 = ${FiS[0].count};
+						  var dName1 = '${dName[4]}';
+						  var dName2 = '${dName[0]}';
+						  var dName3 = '${dName[1]}';
+						  var dName4 = '${dName[2]}';
+						  var dName5 = '${dName[3]}';
+					  </script>
 					</div>
 					</div>					
 					</div> 

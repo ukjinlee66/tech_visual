@@ -140,13 +140,20 @@ public class mainController {
 			return "index";
 		}
 
+	
 	// 요청 URL을 어떤 method가 처리할지 mapping (Get,Post)
 	@RequestMapping(value = "/search")
 	public String getJobList(HttpServletRequest request, HttpServletResponse response, Model model)throws Exception 
 	{
-		
 		// 입력값 받기
 		String search = request.getParameter("search");
+		
+		String[] deptName = new String[]{"SB", "FR", "PU", "AN", "DE"};
+		String[] deptGr = new String[5];
+		String[] modelName = new String[] {"Sec", "Th", "Fo", "Fi"};
+		
+		
+		 
 		
 		String dept[] = {"서버/백엔드",
 				"프론트엔드",
@@ -169,15 +176,15 @@ public class mainController {
 				"응용 프로그램",
 				"블록체인"};
 		boolean check = false;
-		String str ="";
+		String collName ="";
 		enumTest en = new enumTest();
 		for(int i=0;i<dept.length;i++)
 		{
 			if (search.equals(dept[i]))
 			{
 				//MongoDB collection선택
-				str = en.getDBCode(search);
-				jobService.setCollectionName(str);
+				collName = en.getDBCode(search);
+				jobService.setCollectionName(collName);
 				check = true;
 				break;
 			}
@@ -195,31 +202,76 @@ public class mainController {
 				System.out.println(e);
 			}
 		}
-		model.addAttribute("deptName", jobService.getCollectionName()); // 현재 해당 직무 이름.(맵핑이후)
+		model.addAttribute("deptName", search); // 현재 해당 직무 이름.(맵핑이후)
+		
+		
+		
 		
 		List<Notice> en_list = econ.findBydeptRegex(".*" + search+".*");
-    	List<jobData> de_list = jobService.getJobList();
-      	Collections.sort(de_list, comp);
+    	List<jobData> deptTech_list = jobService.getJobList();
+      	Collections.sort(deptTech_list, comp);
       	
+      	
+      	
+		
       	//해당 직무에서 가장 많이 사용되는 기술 top3.
-      	String te1 = de_list.get(0).getWord();
-      	int c1 = Integer.parseInt(de_list.get(0).getCount());
-      	String te2 = de_list.get(1).getWord();
-      	int c2 = Integer.parseInt(de_list.get(1).getCount());
-      	String te3 = de_list.get(2).getWord();
-      	int c3 = Integer.parseInt(de_list.get(2).getCount());
+      	String tec1 = deptTech_list.get(0).getWord();
+      	int c1 = Integer.parseInt(deptTech_list.get(0).getCount());
+      	String tec2 = deptTech_list.get(1).getWord();
+      	int c2 = Integer.parseInt(deptTech_list.get(1).getCount());
+      	String tec3 = deptTech_list.get(2).getWord();
+      	int c3 = Integer.parseInt(deptTech_list.get(2).getCount());
+      	
+      	//?
+      	
+      	
+		model.addAttribute("firG", deptTech_list);
+      	
+      	deptGr[4] = collName;
+      		
+      	int tmp_i = 0; 
+		int tmp_j = 0;
+		
+      	while(true) { 
+			if(tmp_j == 4) {
+				break;
+			}
+			else if(!deptName[tmp_i].equals(collName)) {
+				deptGr[tmp_j] = deptName[tmp_i];
+				jobService.setCollectionName(deptName[tmp_i]);
+				
+				deptTech_list = jobrepo.findByWord(tec1);
+				Collections.sort(deptTech_list, comp);
+				model.addAttribute(modelName[tmp_j]+"F", deptTech_list);
+				
+				deptTech_list = jobrepo.findByWord(tec2);
+				Collections.sort(deptTech_list, comp);
+				model.addAttribute(modelName[tmp_j]+"S", deptTech_list);
+
+				tmp_i++;
+				tmp_j++;
+			}
+			else {
+				tmp_i++;
+				continue;
+			}
+		}
+		model.addAttribute("dName", deptGr);
+		
+      	
+      	
       	
       	//해당직무의 전체 기술을 카운트한 후 비율을 시각화한다.
-      	List<jobData> c1_list = jobrepo.findByword(te1);
-      	List<jobData> c2_list = jobrepo.findByword(te2);
-      	List<jobData> c3_list = jobrepo.findByword(te3);
+      	List<jobData> c1_list = jobrepo.findByWord(tec1);
+      	List<jobData> c2_list = jobrepo.findByWord(tec2);
+      	List<jobData> c3_list = jobrepo.findByWord(tec3);
       	
       	model.addAttribute("tech_one", (c1*100)/en_list.size());
       	model.addAttribute("tech_two", (c2*100)/en_list.size());
       	model.addAttribute("tech_three", (c3*100)/en_list.size());
-      	model.addAttribute("tech_one_name", te1);
-      	model.addAttribute("tech_two_name", te2);
-      	model.addAttribute("tech_three_name", te3);
+      	model.addAttribute("tech_one_name", tec1);
+      	model.addAttribute("tech_two_name", tec2);
+      	model.addAttribute("tech_three_name", tec3);
 		
 		/////////////////////////////////////////	
 		List<Notice> li = econ.findBydept(search); // mapping 함수사용.
@@ -234,11 +286,16 @@ public class mainController {
 		// Collection List 불러오기 & 정렬
 		List<jobData> techList = jobService.getJobList();
 		Collections.sort(techList, comp);
-
+		
+		jobService.setCollectionName(search+ "Q");
 		List<jobData> qualList = jobService.getJobList();
 		Collections.sort(qualList, comp);
+		
+		jobService.setCollectionName(search+ "P");
+		List<jobData> prefList = jobService.getJobList();
+		Collections.sort(prefList, comp);
 
-		jobService.setCollectionName(search + "");
+		jobService.setCollectionName(search + "E");
 		List<jobData> ex_list = jobService.getJobList();
 		Collections.sort(ex_list, comp);
 

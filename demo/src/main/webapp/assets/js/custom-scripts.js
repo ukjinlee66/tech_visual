@@ -31,33 +31,25 @@
             Morris.Bar({
                 element: 'morris-bar-chart',
                 data: [{
-                    y: '1111',
-                    a: 11,
-                    b: 11
+                    y: dName1,
+                    a: fCount1,
+                    b: fCount2
                 }, {
-                    y: '2007',
-                    a: 75,
-                    b: 65
+                    y: dName2,
+                    a: sCount1,
+                    b: sCount2
                 }, {
-                    y: '2008',
-                    a: 50,
-                    b: 40
+                    y: dName3,
+                    a: tCount1,
+                    b: tCount2
                 }, {
-                    y: '2009',
-                    a: 75,
-                    b: 65
+                    y: dName4,
+                    a: foCount1,
+                    b: foCount2
                 }, {
-                    y: '2010',
-                    a: 50,
-                    b: 40
-                }, {
-                    y: '2011',
-                    a: 75,
-                    b: 65
-                }, {
-                    y: '2012',
-                    a: 100,
-                    b: 90
+                    y: dName5,
+                    a: fiCount1,
+                    b: fiCount2
                 }],
                 xkey: 'y',
                 ykeys: ['a', 'b'],

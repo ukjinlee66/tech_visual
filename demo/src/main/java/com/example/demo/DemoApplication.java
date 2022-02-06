@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 public class DemoApplication implements CommandLineRunner
 {
 	@Autowired
-	jobRepositoryCustomimpl jcon;
+	jobServiceImpl jcon;
 	@Autowired
 	enRepositoryCustomimpl econ;
 	@Autowired

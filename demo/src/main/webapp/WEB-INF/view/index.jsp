@@ -22,30 +22,27 @@
 </head>
 
 <body>
-    <div id="wrapper">
+    <!-- <div id="wrapper">
         <nav class="navbar navbar-default top-navbar" role="navigation">
             <div class="navbar-header">
-                <!-- <button type="button" class="navbar-toggle waves-effect waves-dark" data-toggle="collapse" data-target=".sidebar-collapse">
+                <button type="button" class="navbar-toggle waves-effect waves-dark" data-toggle="collapse" data-target=".sidebar-collapse">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
-                </button>-->
+                </button>
                 <a class="navbar-brand waves-effect waves-dark" href="index.html"><i class="large material-icons">track_changes</i> <strong>target</strong></a>
-				 
+				
 		<div id="sideNav" href=""><i class="material-icons dp48">toc</i></div>
             </div>
-
-            <!-- <ul class="nav navbar-top-links navbar-right"> 
+            <ul class="nav navbar-top-links navbar-right"> 
 				<li><a class="dropdown-button waves-effect waves-dark" href="#!" data-activates="dropdown4"><i class="fa fa-envelope fa-fw"></i> <i class="material-icons right">arrow_drop_down</i></a></li>				
 				<li><a class="dropdown-button waves-effect waves-dark" href="#!" data-activates="dropdown3"><i class="fa fa-tasks fa-fw"></i> <i class="material-icons right">arrow_drop_down</i></a></li>
 				<li><a class="dropdown-button waves-effect waves-dark" href="#!" data-activates="dropdown2"><i class="fa fa-bell fa-fw"></i> <i class="material-icons right">arrow_drop_down</i></a></li>
 				  <li><a class="dropdown-button waves-effect waves-dark" href="#!" data-activates="dropdown1"><i class="fa fa-user fa-fw"></i> <b>John Doe</b> <i class="material-icons right">arrow_drop_down</i></a></li>
-            </ul> -->
-        </nav>
+            </ul>
+        </nav> -->
 		<!-- Dropdown Structure -->
-		
-		<!-- 유저 상태 드롭다운 메뉴 -->
 <!-- <ul id="dropdown1" class="dropdown-content">
 <li><a href="#"><i class="fa fa-user fa-fw"></i> My Profile</a>
 </li>
@@ -54,7 +51,6 @@
 <li><a href="#"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
 </li>
 </ul>
-
 <ul id="dropdown2" class="dropdown-content w250">
   <li>
                                 <div>
@@ -102,8 +98,8 @@
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         </li>
-</ul>
-<ul id="dropdown3" class="dropdown-content dropdown-tasks w250">
+</ul> -->
+<!-- <ul id="dropdown3" class="dropdown-content dropdown-tasks w250">
 <li>
 		<a href="#">
 			<div>
@@ -169,8 +165,8 @@
 	</li>
 	<li class="divider"></li>
 	<li>
-</ul>    -->
-<!-- <ul id="dropdown4" class="dropdown-content dropdown-tasks w250 taskList">
+</ul>   
+<ul id="dropdown4" class="dropdown-content dropdown-tasks w250 taskList">
   <li>
                                 <div>
                                     <strong>John Doe</strong>
@@ -211,9 +207,12 @@
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         </li>
-</ul>  --> 
+</ul>   -->
 	   <!--/. NAV TOP  -->
-        <!-- <nav class="navbar-default navbar-side" role="navigation">
+	   	<div>
+	   		<input type="text" name="Search" id="Search" >
+	   	</div>
+        <nav class="navbar-default navbar-side" role="navigation">
             <div class="sidebar-collapse">
                 <ul class="nav" id="main-menu">
 
@@ -221,10 +220,10 @@
                         <a class="active-menu waves-effect waves-dark" href="index.html"><i class="fa fa-dashboard"></i> Dashboard</a>
                     </li>
                     <li>
-                        <a href="ui-elements.jsp" class="waves-effect waves-dark"><i class="fa fa-desktop"></i> UI Elements</a>
+                        <a href="ui-elements.html" class="waves-effect waves-dark"><i class="fa fa-desktop"></i> UI Elements</a>
                     </li>
 					<li>
-                        <a href="chart.jsp" class="waves-effect waves-dark"><i class="fa fa-bar-chart-o"></i> Charts</a>
+                        <a href="chart.html" class="waves-effect waves-dark"><i class="fa fa-bar-chart-o"></i> Charts</a>
                     </li>
                     <li>
                         <a href="tab-panel.html" class="waves-effect waves-dark"><i class="fa fa-qrcode"></i> Tabs & Panels</a>
@@ -272,21 +271,23 @@
 
             </div>
 
-        </nav> -->
+        </nav>
         <!-- /. NAV SIDE  -->
       
 		<div id="page-wrapper">
 		  <div class="header"> 
-                        <!-- <h1 class="page-header"> -->
-                        <!-- 검색박스 채워넣기. -->
-                        	<input type="text" placeholder="직무 이름 입력">
-                        	<button>검색</button>
-                        <!--</h1>
-						 <ol class="breadcrumb">
-					  <li><a href="#">Home</a></li>
-					  <li><a href="#">Dashboard</a></li>
-					  <li class="active">Data</li>
-					</ol>  -->				
+                        <h1 class="page-header">
+                           ${jobList[0].word} 
+                        </h1>
+						<ol class="breadcrumb">
+					  <li>
+					  <form method="GET" action="${pageContext.request.contextPath}/List">
+					  <input width="100%" name="search">
+					  <button type="submit"> 검색</button>
+					  </form>
+					  </li>
+					</ol> 
+									
 		</div>
             <div id="page-inner">
 
@@ -300,10 +301,10 @@
 						</div>
 						<div class="card-stacked red">
 						<div class="card-content">
-						<h3>84,198</h3> 
+						<h3>${test[0].count}</h3> 
 						</div>
 						<div class="card-action">
-						<strong>1등 직무 양</strong>
+						<strong>${test[0].word}</strong>
 						</div>
 						</div>
 						</div>
@@ -317,10 +318,10 @@
 						</div>
 						<div class="card-stacked orange">
 						<div class="card-content">
-						<h3>36,540</h3> 
+						<h3>${test[1].count}</h3> 
 						</div>
 						<div class="card-action">
-						<strong>2등 직무 양</strong>
+						<strong>${test[1].word}</strong>
 						</div>
 						</div>
 						</div> 
@@ -333,10 +334,10 @@
 						</div>
 						<div class="card-stacked blue">
 						<div class="card-content">
-						<h3>24,225</h3> 
+						<h3>${test[2].count}</h3> 
 						</div>
 						<div class="card-action">
-						<strong>3등 직무 양</strong>
+						<strong>${test[2].word}</strong>
 						</div>
 						</div>
 						</div> 
@@ -350,10 +351,10 @@
 						</div>
 						<div class="card-stacked green">
 						<div class="card-content">
-						<h3>88,658</h3> 
+						<h3>${test[3].count}</h3> 
 						</div>
 						<div class="card-action">
-						<strong>4등 직무</strong>
+						<strong>${test[3].word}</strong>
 						</div>
 						</div>
 						</div> 
@@ -368,7 +369,7 @@
 						  	<div class="row">
 								<div class="col-xs-12 col-sm-6 col-md-6"> 
 										<div class="card-panel text-center">
-											<h4>Profit</h4>
+											<h4>size : ${deptVal}</h4>
 											<div class="easypiechart" id="easypiechart-blue" data-percent="82" ><span class="percent">82%</span>
 											</div> 
 										</div>
@@ -413,9 +414,9 @@
 						</div><!--/.row-->
 					</div>
 					
-		 
+		 <!-- 
 				<div class="row">
-				<!-- <div class="col-md-5"> 
+				<div class="col-md-5"> 
 						<div class="card">
 						<div class="card-image">
 						 <div id="morris-line-chart"></div>
@@ -425,10 +426,9 @@
 						</div>
 						</div>
 		  
-					</div> -->		
+					</div>		 -->
 					
-					<!-- 막대그래프 -->
-					<div class="col-md-7"> 
+						<div class="col-md-7"> 
 					<div class="card">
 					<div class="card-image">
 					  <div id="morris-bar-chart"></div>
@@ -443,7 +443,7 @@
 			 
 				
 				
-                <!-- <div class="row">
+            <!--     <div class="row">
                     <div class="col-xs-12">
 						<div class="card">
 					<div class="card-image">
@@ -454,13 +454,12 @@
 					</div>
 					</div>	 
                     </div> 
-
                 </div> -->
-				<!-- <div class="row">
+				<div class="row">
 				<div class="col-md-12">
 				
 					</div>		
-				</div>  -->	
+				</div> 	
                 <!-- /. ROW  -->
 
 	   
@@ -468,7 +467,7 @@
 				
 				
                 <div class="row">
-                    <!-- <div class="col-md-4 col-sm-12 col-xs-12">
+                    <div class="col-md-4 col-sm-12 col-xs-12">
 						<div class="card"><div class="card-action">
 					  <b>Tasks Panel</b>
 					</div>
@@ -487,17 +486,17 @@
 					
 					</div>	  
 
-                    </div> -->
+                    </div>
                     <div class="col-md-8 col-sm-12 col-xs-12">
 	<div class="card">
 	<div class="card-action">
-					  <b>자격요건, 우대사항 랭킹</b>
+					  <b>User List</b>
 					</div>
 					<div class="card-image">
 					  <ul class="collection">
     <li class="collection-item avatar">
       <i class="material-icons circle green">track_changes</i>
-      <span class="title">1등</span>
+      <span class="title">Title</span>
       <p>First Line <br>
          Second Line
       </p>
@@ -505,7 +504,7 @@
     </li>
     <li class="collection-item avatar">
       <i class="material-icons circle">folder</i>
-      <span class="title">2등</span>
+      <span class="title">Title</span>
       <p>First Line <br>
          Second Line
       </p>
@@ -513,7 +512,7 @@
     </li>
     <li class="collection-item avatar">
       <i class="material-icons circle green">track_changes</i>
-      <span class="title">3등</span>
+      <span class="title">Title</span>
       <p>First Line <br>
          Second Line
       </p>
@@ -521,7 +520,7 @@
     </li>
     <li class="collection-item avatar">
       <i class="material-icons circle red">play_arrow</i>
-      <span class="title">4등</span>
+      <span class="title">Title</span>
       <p>First Line <br>
          Second Line
       </p>
@@ -536,7 +535,6 @@
                     </div>
                 </div>
                 <!-- /. ROW  -->
-              <!-- 오른쪽 하단 원 작은메뉴 -->
 			   <div class="fixed-action-btn horizontal click-to-toggle">
     <a class="btn-floating btn-large red">
       <i class="material-icons">menu</i>
@@ -549,11 +547,11 @@
     </ul>
   </div>
 		
-				<!-- <footer><p>Shared by <i class="fa fa-love"></i><a href="https://bootstrapthemes.co">BootstrapThemes</a>
+				<footer><p>Shared by <i class="fa fa-love"></i><a href="https://bootstrapthemes.co">BootstrapThemes</a>
 </p>
 				
         
-				</footer> -->
+				</footer>
             </div>
             <!-- /. PAGE INNER  -->
         </div>

@@ -23,15 +23,4 @@ public class jobData {
 		this.word = word;
 		this.count = count;
 	}
-	/*
-    private String company;
-    private String dept;
-    private String tech;
-    private String qual;
-    private String prefer;
-    
-    */
-    
-    
-
 }

@@ -39,6 +39,8 @@ public class mainController {
 	
 	@Autowired
 	private JobService jobService;
+	@Autowired
+	private jobRepository jobrepo;
 	
 	@Autowired
 	private enRepositoryCustom econ;
@@ -46,7 +48,8 @@ public class mainController {
 	private myComparator comp = new myComparator();
 	
 	@GetMapping("/")
-	public String mainPage(Model model) {
+	public String mainPage(Model model) 
+	{
 		jobService.setCollName("TT");
 		
 	
@@ -54,8 +57,8 @@ public class mainController {
   	//int siz = jobService.getdeptList();
   	Collections.sort(tt_list, comp);
   	//session에 저장
-  	model.addAttribute("test",tt_list);
-  	//model.addAttribute("dsize",);
+  	model.addAttribute("test",tt_list); // 전체 직무.
+  	
   	enumTest db = null;
   	String str = db.getDBCode(jobService.getCollectionName());
   	List<Notice> li = econ.findBydept(str); // mapping 함수사용.
@@ -64,6 +67,29 @@ public class mainController {
   	System.out.println(size + " " + li2.size() + " ");
   	model.addAttribute("deptVal", (size*100)/li2.size());
   	model.addAttribute("deptName", str); // 현재 해당 직무 이름.(맵핑이후)
+  	
+  	jobService.setCollName("DE");
+  	List<jobData> de_list = jobService.getJobList();
+  	Collections.sort(de_list, comp);
+  	//해당 직무에서 가장 많이 사용되는 기술 top3.
+  	String te1 = de_list.get(0).getWord();
+  	int c1 = Integer.parseInt(de_list.get(0).getCount());
+  	String te2 = de_list.get(1).getWord();
+  	int c2 = Integer.parseInt(de_list.get(1).getCount());
+  	String te3 = de_list.get(2).getWord();
+  	int c3 = Integer.parseInt(de_list.get(2).getCount());
+  	
+  	//전체 공고 중 전에 선택한 직무의 top3기술의 비율을 시각화한다.
+  	jobService.setCollName("TT");
+  	List<jobData> all_list = jobrepo.findByword(te1); //1기술 전체 개수.
+  	Collections.sort(all_list, comp);
+  	System.out.println(c1);
+  	model.addAttribute("tech_one", (c1*100)/Integer.parseInt(all_list.get(0).getCount()));
+  	model.addAttribute("tech_two", (c2*100)/Integer.parseInt(all_list.get(0).getCount()));
+  	model.addAttribute("tech_three", (c3*100)/Integer.parseInt(all_list.get(0).getCount()));
+  	model.addAttribute("tech_one_name", te1);
+  	model.addAttribute("tech_two_name", te2);
+  	model.addAttribute("tech_three_name", te3);
   	
   	return "index";
 	}

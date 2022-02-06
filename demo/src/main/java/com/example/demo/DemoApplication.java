@@ -11,8 +11,8 @@ import org.springframework.stereotype.Component;
 @SpringBootApplication
 public class DemoApplication implements CommandLineRunner
 {
-	@Autowired
-	jobServiceImpl jcon;
+//	@Autowired
+//	jobServiceImpl jcon;
 	@Autowired
 	enRepositoryCustomimpl econ;
 	@Autowired

@@ -12,5 +12,6 @@ import org.springframework.stereotype.Repository;
 public interface jobRepository extends MongoRepository<jobData,String> {
 	
 	public List<jobData> findAll();
+	public List<jobData> findByword(String tech_name);
 	//public List<jobData> findSort();	
 }

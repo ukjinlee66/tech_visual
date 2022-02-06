@@ -376,22 +376,22 @@
 								</div>
 								<div class="col-xs-12 col-sm-6 col-md-6"> 
 										<div class="card-panel text-center">
-											<h4>No. of Visits</h4>
-											<div class="easypiechart" id="easypiechart-red" data-percent="46" ><span class="percent">46%</span>
+											<h4>${tech_one_name}</h4>
+											<div class="easypiechart" id="easypiechart-red" data-percent=${tech_one} ><span class="percent">${tech_one}%</span>
 											</div>
 										</div>
 								</div>
 								<div class="col-xs-12 col-sm-6 col-md-6"> 
 										<div class="card-panel text-center">
-											<h4>Customers</h4>
-											<div class="easypiechart" id="easypiechart-teal" data-percent="84" ><span class="percent">84%</span>
+											<h4>${tech_two_name}</h4>
+											<div class="easypiechart" id="easypiechart-teal" data-percent=${tech_two} ><span class="percent">${tech_two}%</span>
 											</div> 
 										</div>
 								</div>
 								<div class="col-xs-12 col-sm-6 col-md-6"> 
 										<div class="card-panel text-center">
-											<h4>Sales</h4>
-											<div class="easypiechart" id="easypiechart-orange" data-percent="55" ><span class="percent">55%</span>
+											<h4>${tech_three_name}</h4>
+											<div class="easypiechart" id="easypiechart-orange" data-percent=${tech_three}"><span class="percent">${tech_three}%</span>
 											</div>
 										</div>
 								</div>  

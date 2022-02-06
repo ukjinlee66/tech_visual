@@ -56,10 +56,9 @@ public class mainController {
 	public String mainPage(Model model) 
 	{
 		//default collection 설정.
-	  	List<Notice> li = econ.findBydept("데이터 엔지니어"); // default collection은 데이터 엔지니어 기준.
+	  	List<Notice> li = econ.findBydeptRegex(".*데이터 엔지니어.*"); // default collection은 데이터 엔지니어 기준.
 	  	int size = li.size();
 	  	List<Notice> li2 = econ.findAll(); // 전체 공고.
-	  	System.out.println(size + " " + li2.size() + " ");
 	  	model.addAttribute("deptName","데이터 엔지니어");
 	  	model.addAttribute("deptVal", (size*100)/li2.size());
 	  	
@@ -76,13 +75,9 @@ public class mainController {
 	  	int c3 = Integer.parseInt(de_list.get(2).getCount());
 	  	//전체 공고 중 전에 선택한 직무의 top3기술의 비율을 시각화한다.
 	  	List<jobData> all_list = jobrepo.findAll();
-      	int sum =0;
-      	for(int i=0;i<all_list.size();i++)
-      		sum+= Integer.parseInt(all_list.get(i).getCount());
-      	System.out.println(sum);
-      	model.addAttribute("tech_one", (c1*100)/sum);
-      	model.addAttribute("tech_two", (c2*100)/sum);
-      	model.addAttribute("tech_three", (c3*100)/sum);
+      	model.addAttribute("tech_one", (c1*100)/li.size());
+      	model.addAttribute("tech_two", (c2*100)/li.size());
+      	model.addAttribute("tech_three", (c3*100)/li.size());
       	model.addAttribute("tech_one_name", te1);
       	model.addAttribute("tech_two_name", te2);
       	model.addAttribute("tech_three_name", te3);
@@ -148,7 +143,6 @@ public class mainController {
 			{
 				//MongoDB collection선택
 				str = en.getDBCode(search);
-				System.out.println("건우의 희망 : " + str);
 				jobService.setCollName(str);
 				check = true;
 				break;
@@ -167,9 +161,7 @@ public class mainController {
 				System.out.println(e);
 			}
 		}
-		System.out.println("건우의 노력 : " + jobService.getCollName());
 		model.addAttribute("deptName", jobService.getCollName()); // 현재 해당 직무 이름.(맵핑이후)
-		System.out.println("name : " + jobService.getCollName());
 		
 		//Collection List 불러오기 & 정렬
 //    	List<jobData> techList = jobService.getJobList();
@@ -188,48 +180,32 @@ public class mainController {
     	
     	/////////////////////////////////////
     	//해당 직무 기술개수.
-		System.out.println("job : " + jobService.getCollName());
-		List<Notice> en_list = econ.findBydept(search);
-		System.out.println("전체공고 중 검색직무 공고의 수 : " + en_list.size());
+		List<Notice> en_list = econ.findBydeptRegex(".*" + search+".*");
     	List<jobData> de_list = jobService.getJobList();
-    	System.out.println("직무 공고 개수 : " + de_list.size());
-    	System.out.println(de_list.size());
       	Collections.sort(de_list, comp);
       	//해당 직무에서 가장 많이 사용되는 기술 top3.
       	String te1 = de_list.get(0).getWord();
       	int c1 = Integer.parseInt(de_list.get(0).getCount());
-      	System.out.println("c1 : " + c1);
       	String te2 = de_list.get(1).getWord();
       	int c2 = Integer.parseInt(de_list.get(1).getCount());
-      	System.out.println("c2 : " + c2);
       	String te3 = de_list.get(2).getWord();
       	int c3 = Integer.parseInt(de_list.get(2).getCount());
-      	System.out.println("c3 : " + c3);
       	//해당직무의 전체 기술을 카운트한 후 비율을 시각화한다.
       	List<jobData> c1_list = jobrepo.findByword(te1);
       	List<jobData> c2_list = jobrepo.findByword(te2);
       	List<jobData> c3_list = jobrepo.findByword(te3);
-      	System.out.println("all_list : " + de_list.size());
-      	int sum =0;
-      	for(int i=0;i<de_list.size();i++)
-      		sum+= Integer.parseInt(de_list.get(i).getCount());
-      	System.out.println("sum : " + sum);
-      	model.addAttribute("tech_one", (c1_list.size()*100)/en_list.size());
-      	model.addAttribute("tech_two", (c2_list.size()*100)/en_list.size());
-      	model.addAttribute("tech_three", (c3_list.size()*100)/en_list.size());
+      	model.addAttribute("tech_one", (c1*100)/en_list.size());
+      	model.addAttribute("tech_two", (c2*100)/en_list.size());
+      	model.addAttribute("tech_three", (c3*100)/en_list.size());
       	model.addAttribute("tech_one_name", te1);
       	model.addAttribute("tech_two_name", te2);
       	model.addAttribute("tech_three_name", te3);
       	
-      	/////////////////////////////////////////
-      	jobService2.setCollName("TT");
-      	System.out.println("가즈아 : " + str);
-      	List<Notice> li = econ.findBydept(str); // mapping 함수사용.
-      	int size = li.size();
+      	/////////////////////////////////////////	
+      	List<Notice> li = econ.findBydept(search); // mapping 함수사용.
+      	int size = en_list.size();
       	List<Notice> li2 = econ.findAll(); // 전체 공고.
-      	System.out.println(size + " " + li2.size() + " ");
       	model.addAttribute("deptVal", (size*100)/li2.size());
-      	
       	////////////////////////////////////////
         return "index"; 
 	}

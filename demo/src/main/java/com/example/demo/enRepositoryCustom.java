@@ -9,4 +9,5 @@ public interface enRepositoryCustom extends MongoRepository<Notice, String>
 {
 	public List<Notice> findBydept(String dept);
 	public List<Notice> findBycompany(String company);
+	public List<Notice> findBydeptRegex(String query);
 }

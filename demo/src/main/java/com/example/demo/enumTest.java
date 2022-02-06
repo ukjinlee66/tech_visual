@@ -3,7 +3,7 @@ package com.example.demo;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
-public class tete {
+public class enumTest {
 	@Getter
 	@AllArgsConstructor
 	public enum SearchEx1 {

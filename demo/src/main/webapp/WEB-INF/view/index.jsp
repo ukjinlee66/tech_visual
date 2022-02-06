@@ -22,7 +22,7 @@
 </head>
 
 <body>
-    <div id="wrapper">
+    <!-- <div id="wrapper">
         <nav class="navbar navbar-default top-navbar" role="navigation">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle waves-effect waves-dark" data-toggle="collapse" data-target=".sidebar-collapse">
@@ -42,9 +42,9 @@
 				<li><a class="dropdown-button waves-effect waves-dark" href="#!" data-activates="dropdown2"><i class="fa fa-bell fa-fw"></i> <i class="material-icons right">arrow_drop_down</i></a></li>
 				  <li><a class="dropdown-button waves-effect waves-dark" href="#!" data-activates="dropdown1"><i class="fa fa-user fa-fw"></i> <b>John Doe</b> <i class="material-icons right">arrow_drop_down</i></a></li>
             </ul>
-        </nav>
+        </nav> -->
 		<!-- Dropdown Structure -->
-<ul id="dropdown1" class="dropdown-content">
+<!-- <ul id="dropdown1" class="dropdown-content">
 <li><a href="#"><i class="fa fa-user fa-fw"></i> My Profile</a>
 </li>
 <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
@@ -99,8 +99,8 @@
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         </li>
-</ul>
-<ul id="dropdown3" class="dropdown-content dropdown-tasks w250">
+</ul> -->
+<!-- <ul id="dropdown3" class="dropdown-content dropdown-tasks w250">
 <li>
 		<a href="#">
 			<div>
@@ -208,8 +208,11 @@
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         </li>
-</ul>  
+</ul>   -->
 	   <!--/. NAV TOP  -->
+	   	<div>
+	   		<input type="text" name="Search" id="Search" >
+	   	</div>
         <nav class="navbar-default navbar-side" role="navigation">
             <div class="sidebar-collapse">
                 <ul class="nav" id="main-menu">
@@ -275,12 +278,15 @@
 		<div id="page-wrapper">
 		  <div class="header"> 
                         <h1 class="page-header">
-                            Dashboard
+                           ${jobList[0].word} 
                         </h1>
 						<ol class="breadcrumb">
-					  <li><a href="#">Home</a></li>
-					  <li><a href="#">Dashboard</a></li>
-					  <li class="active">Data</li>
+					  <li>
+					  <form method="GET" action="${pageContext.request.contextPath}/mkGraph">
+					  <input width="100%" name="search">
+					  <button type="submit"> 검색</button>
+					  </form>
+					  </li>
 					</ol> 
 									
 		</div>
@@ -296,10 +302,10 @@
 						</div>
 						<div class="card-stacked red">
 						<div class="card-content">
-						<h3>84,198</h3> 
+						<h3>${test[0].count}</h3> 
 						</div>
 						<div class="card-action">
-						<strong>REVENUE</strong>
+						<strong>${test[0].word}</strong>
 						</div>
 						</div>
 						</div>
@@ -313,10 +319,10 @@
 						</div>
 						<div class="card-stacked orange">
 						<div class="card-content">
-						<h3>36,540</h3> 
+						<h3>${test[1].count}</h3> 
 						</div>
 						<div class="card-action">
-						<strong>SALES</strong>
+						<strong>${test[1].word}</strong>
 						</div>
 						</div>
 						</div> 
@@ -329,10 +335,10 @@
 						</div>
 						<div class="card-stacked blue">
 						<div class="card-content">
-						<h3>24,225</h3> 
+						<h3>${test[2].count}</h3> 
 						</div>
 						<div class="card-action">
-						<strong>PRODUCTS</strong>
+						<strong>${test[2].word}</strong>
 						</div>
 						</div>
 						</div> 
@@ -346,10 +352,10 @@
 						</div>
 						<div class="card-stacked green">
 						<div class="card-content">
-						<h3>88,658</h3> 
+						<h3>${test[3].count}</h3> 
 						</div>
 						<div class="card-action">
-						<strong>VISITS</strong>
+						<strong>${test[3].word}</strong>
 						</div>
 						</div>
 						</div> 
@@ -409,7 +415,7 @@
 						</div><!--/.row-->
 					</div>
 					
-		 
+		 <!-- 
 				<div class="row">
 				<div class="col-md-5"> 
 						<div class="card">
@@ -421,7 +427,7 @@
 						</div>
 						</div>
 		  
-					</div>		
+					</div>		 -->
 					
 						<div class="col-md-7"> 
 					<div class="card">
@@ -438,7 +444,7 @@
 			 
 				
 				
-                <div class="row">
+            <!--     <div class="row">
                     <div class="col-xs-12">
 						<div class="card">
 					<div class="card-image">
@@ -450,7 +456,7 @@
 					</div>	 
                     </div> 
 
-                </div>
+                </div> -->
 				<div class="row">
 				<div class="col-md-12">
 				

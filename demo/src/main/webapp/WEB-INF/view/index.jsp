@@ -436,6 +436,25 @@
 					</div> 
 					<div class="card-action">
 					  <b> Bar Chart Example</b>
+					  <script language=javascript> 
+						  var fCount1 = ${firG[0].count};
+						  var fCount2 = ${firG[1].count};
+						  var fWord1 = '${firG[0].word}';
+						  var fWord2 = '${firG[1].word}';
+						  var sCount1 = ${SecF[0].count};
+						  var sCount2 = ${SecS[0].count};
+						  var tCount1 = ${ThF[0].count};
+						  var tCount2 = ${ThS[0].count};
+						  var foCount1 = ${FoF[0].count};
+						  var foCount2 = ${FoS[0].count};
+						  var fiCount1 = ${FiF[0].count};
+						  var fiCount2 = ${FiS[0].count};
+						  var dName1 = '${dName[4]}';
+						  var dName2 = '${dName[0]}';
+						  var dName3 = '${dName[1]}';
+						  var dName4 = '${dName[2]}';
+						  var dName5 = '${dName[3]}';
+					  </script>
 					</div>
 					</div>					
 					</div>

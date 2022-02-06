@@ -44,7 +44,8 @@ public class mainController {
 	
 	@Autowired
 	private JobService jobService;
-	
+	@Autowired
+	private jobRepository jobR;
 	private myComparator comp = new myComparator();
 	
 	@GetMapping("/")
@@ -76,15 +77,18 @@ public class mainController {
 	@RequestMapping("/mkGraph")
 	public String mkGraph(HttpServletRequest httpServeltRequest ,Model model) {
 		String searchKeyword = httpServeltRequest.getParameter("search");
-		SearchEx comKeyword = SearchEx.valueOf(searchKeyword);
-		String[] deptName = new String[]{"서버/백엔드", "프론트엔드", "웹 풀스택", "안드로이드 앱", "데이터 엔지니어"};
+		String[] deptName = new String[]{"SB", "FR", "PU", "AN", "DE"};
+		String[] deptGr = new String[5];
+		String[] modelName = new String[] {"Sec", "Th", "Fo", "Fi"};
 		int i = 0;
 		int j = 0;
 		
+		deptGr[4] = searchKeyword;
 		jobService.setCollName(searchKeyword);
 		List<jobData> li = jobService.getJobList();
 		Collections.sort(li, comp);
-		System.out.println(li);
+		String tec1 = li.get(0).getWord();
+		String tec2 = li.get(1).getWord();
 		model.addAttribute("firG", li);
 		
 		while(true) { 
@@ -92,10 +96,17 @@ public class mainController {
 				break;
 			}
 			else if(!deptName[i].equals(searchKeyword)) {
+				deptGr[j] = deptName[i];
 				jobService.setCollName(deptName[i]);
-				li = jobService.getJobList();
+				
+				li = jobR.findByWord(tec1);
 				Collections.sort(li, comp);
-				model.addAttribute(i + "G", li);
+				model.addAttribute(modelName[j]+"F", li);
+				
+				li = jobR.findByWord(tec2);
+				Collections.sort(li, comp);
+				model.addAttribute(modelName[j]+"S", li);
+
 				i++;
 				j++;
 			}
@@ -104,6 +115,7 @@ public class mainController {
 				continue;
 			}
 		}
+		model.addAttribute("dName", deptGr);
 		return "index";
 	}
 	

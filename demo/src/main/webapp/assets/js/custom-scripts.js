@@ -20,35 +20,34 @@
                     $('div.sidebar-collapse').removeClass('collapse')
                 }
             });
-
             /* MORRIS BAR CHART
 			-----------------------------------------*/
             Morris.Bar({
                 element: 'morris-bar-chart',
                 data: [{
-                    y: '2006',
-                    a: 100,
-                    b: 90
+                    y: dName1,
+                    a: fCount1,
+                    b: fCount2
                 }, {
-                    y: '2007',
-                    a: 75,
-                    b: 65
+                    y: dName2,
+                    a: sCount1,
+                    b: sCount2
                 }, {
-                    y: '2008',
-                    a: 50,
-                    b: 40
+                    y: dName3,
+                    a: tCount1,
+                    b: tCount2
                 }, {
-                    y: '2009',
-                    a: 75,
-                    b: 65
+                    y: dName4,
+                    a: foCount1,
+                    b: foCount2
                 }, {
-                    y: '2010',
-                    a: 50,
-                    b: 40
+                    y: dName5,
+                    a: fiCount1,
+                    b: fiCount2
                 }],
                 xkey: 'y',
                 ykeys: ['a', 'b'],
-                labels: ['Series A', 'Series B'],
+                labels: [ fWord1, fWord2 ],
 				 barColors: [
     '#e96562','#414e63',
     '#A8E9DC' 

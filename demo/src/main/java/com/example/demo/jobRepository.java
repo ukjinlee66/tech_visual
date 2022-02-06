@@ -12,7 +12,7 @@ import org.springframework.stereotype.Repository;
 public interface jobRepository extends MongoRepository<jobData,String> {
 	
 	public List<jobData> findAll();
-	
+	public List<jobData> findByWord(String str);
 	//public List<jobData> findSort();	
 }
 

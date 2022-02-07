@@ -53,7 +53,7 @@
                 }],
                 xkey: 'y',
                 ykeys: ['a', 'b'],
-                labels: ['Series A', 'Series B'],
+                labels: [fWord1, fWord2],
 				 barColors: [
     '#e96562','#414e63',
     '#A8E9DC' 
@@ -74,21 +74,21 @@
                     label: "경력무관",
                     value: CE1
                 }, {
-                    label: WE2+"년 이상",
+                    label: "최소"+WE2+"년",
                     value: CE2
                 }, {
-                    label: WE3+"년 이상",
+                    label: "최소"+WE3+"년",
                     value: CE3
                 }, {
-                    label: WE4+"년 이상",
+                    label: "최소"+WE4+"년",
                     value: CE4
                 }, {
-                    label: WE5+"년 이상",
+                    label: "최소"+WE5+"년",
                     value: CE5
                 }],
 				   colors: [
-    '#A6A6A6','#414e63',
-    '#e96562','#414e63','#e96562' 
+    '#ddeecc','#eecccc',
+    '#cceeee','#ddccee','#eeccd4' 
   ],
                 resize: true
             });

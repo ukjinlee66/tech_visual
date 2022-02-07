@@ -93,9 +93,21 @@ public class mainController {
 		 * model.addAttribute("sessionTT", tt_list); // 전체 직무.
 		 */
 		
-		  //첫화면에 보여줄 DE정보 불러오기 
-		  List<jobData> de_list2 = jobService.getJobList();
-		  Collections.sort(de_list2, comp); model.addAttribute("qualList",de_list2 );
+		  //첫화면에 보여줄 DE정보 불러오기
+		  jobService.setCollectionName("DEQ"); 
+		  List<jobData> qual_list = jobService.getJobList();
+		  Collections.sort(qual_list, comp);
+		  
+		  jobService.setCollectionName("DEP"); 
+		  List<jobData> pref_list = jobService.getJobList();
+		  Collections.sort(pref_list, comp);
+		  
+		  model.addAttribute("qualList",qual_list );
+		  
+		  model.addAttribute("prefList",pref_list );
+		  
+		  
+		  
 		  
 		  jobService.setCollectionName("DEE"); 
 		  List<jobData> ex_list = jobService.getJobList(); 
@@ -108,10 +120,12 @@ public class mainController {
 			  if (jd.getWord().equals("0")) 
 			  { 	
 				  exep_zero = jd.getCount();
-			  		ex_list.remove(n); break; 
+			  		ex_list.remove(n); 
+			  		break; 
 			  } 
 			  n++; 
 		  } 
+		  System.out.println(ex_list);
 		  model.addAttribute("exepZero",exep_zero);
 		  model.addAttribute("exep",ex_list );
 		  
@@ -134,8 +148,53 @@ public class mainController {
 		  model.addAttribute("sessionTQ",tq_list); //session에 저장
 		  model.addAttribute("sessionTP",tp_list);
 		  
+		  String[] deptName = new String[]{"SB", "FR", "PU", "AN", "DE"};
+		  String[] deptGr = new String[5];
+		  String[] modelName = new String[] {"Sec", "Th", "Fo", "Fi"};
+		  
+		  String tec1 = de_list.get(0).getWord();
+	      	
+	      String tec2 = de_list.get(1).getWord();
+		  
+		  model.addAttribute("firG", de_list);
+	      	
+	      	deptGr[4] = "DE";
+	      		
+	      	int tmp_i = 0; 
+			int tmp_j = 0;
+			
+	      	while(true) { 
+				if(tmp_j == 4) {
+					break;
+				}
+				else if(!deptName[tmp_i].equals("DE")) {
+					deptGr[tmp_j] = deptName[tmp_i];
+					jobService.setCollectionName(deptName[tmp_i]);
+					
+					de_list = jobrepo.findByWord(tec1);
+					Collections.sort(de_list, comp);
+					model.addAttribute(modelName[tmp_j]+"F", de_list);
+					
+					de_list = jobrepo.findByWord(tec2);
+					Collections.sort(de_list, comp);
+					model.addAttribute(modelName[tmp_j]+"S", de_list);
+
+					tmp_i++;
+					tmp_j++;
+				}
+				else {
+					tmp_i++;
+					continue;
+				}
+			}
+			model.addAttribute("dName", deptGr);
+		  
+		  
+		  
 		  
 		  System.out.println("main 호출");
+		  
+		  
 		 
 			return "index";
 		}
@@ -147,10 +206,7 @@ public class mainController {
 	{
 		// 입력값 받기
 		String search = request.getParameter("search");
-		
-		String[] deptName = new String[]{"SB", "FR", "PU", "AN", "DE"};
-		String[] deptGr = new String[5];
-		String[] modelName = new String[] {"Sec", "Th", "Fo", "Fi"};
+	
 		
 		
 		 
@@ -172,7 +228,7 @@ public class mainController {
 				"임베디드 소프트웨어",
 				"로보틱스 미들웨어",
 				"QA",
-				"IoT",
+				"사물인터넷(IoT)",
 				"응용 프로그램",
 				"블록체인"};
 		boolean check = false;
@@ -224,6 +280,9 @@ public class mainController {
       	
       	//?
       	
+      	String[] deptName = new String[]{"SB", "FR", "PU", "AN", "DE"};
+		String[] deptGr = new String[5];
+		String[] modelName = new String[] {"Sec", "Th", "Fo", "Fi"};
       	
 		model.addAttribute("firG", deptTech_list);
       	
@@ -280,22 +339,20 @@ public class mainController {
 		model.addAttribute("deptVal", (size*100)/li2.size());
 		////////////////////////////////////////
 		
-		// MongoDB collection선택
-		jobService.setCollectionName(search);
-
 		// Collection List 불러오기 & 정렬
+		jobService.setCollectionName(collName);
 		List<jobData> techList = jobService.getJobList();
 		Collections.sort(techList, comp);
 		
-		jobService.setCollectionName(search+ "Q");
+		jobService.setCollectionName(collName+ "Q");
 		List<jobData> qualList = jobService.getJobList();
 		Collections.sort(qualList, comp);
 		
-		jobService.setCollectionName(search+ "P");
+		jobService.setCollectionName(collName+ "P");
 		List<jobData> prefList = jobService.getJobList();
 		Collections.sort(prefList, comp);
 
-		jobService.setCollectionName(search + "E");
+		jobService.setCollectionName(collName + "E");
 		List<jobData> ex_list = jobService.getJobList();
 		Collections.sort(ex_list, comp);
 
@@ -315,9 +372,10 @@ public class mainController {
 
 		// Total Tech
 		model.addAttribute("searchList", techList);
-
 		// 자격사항
 		model.addAttribute("qualList", qualList);
+		// 우대사항
+		model.addAttribute("prefList", prefList);
 
 		System.out.println(search);
 		System.out.println(techList);

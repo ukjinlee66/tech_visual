@@ -45,4 +45,13 @@ public class enumTest
 		} 
 		return null; 
 	}
+	public static String exchangeDBCode(String DBname) {
+		for (SearchEx1 name : SearchEx1.values()) {
+			if (name.toString().equals(DBname)) {
+				return name.getDBname(); 
+			} 
+		} 
+		return null; 
+	}
+
 }

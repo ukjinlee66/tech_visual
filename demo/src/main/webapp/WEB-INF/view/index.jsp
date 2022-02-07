@@ -23,22 +23,22 @@
 
 <body>
 
-	
+	<!-- <img src = "assets/img/java-brands2.jpg"> -->
      <div style = "background-color:#1F2837;">
       <div style= margin: 0 auto; ">
 		<div id="page-wrapper">
-		<div id="page-inner">	
-			
+		<div id="page-inner">
+
 			<div class="row">
 		<div class="dashboard-cards" style="width:55%;"> 
                 
-					
+					<h4 align="center"> <b>전체 기술 스택 순위 TOP4</b></h4>
+					<br>
 					<div class="col-xs-12 col-sm-6 col-md-3">
 						<div class="card horizontal cardIcon waves-effect waves-dark">
 						
 						<div class="card-image red">
 						<i class="material-icons dp48"><iframe src="assets/img/java.svg"  style="width:100%; height: 60px; border: 0"></iframe></i>
-						<img src= "assets/img/bg-img.jpg">
 						</div>
 						<div class="card-stacked red">
 						<div class="card-content">
@@ -147,7 +147,7 @@
 		  <div> 
                         <h1 class="page-header">
                         
-                           ${searchList[0].word} 
+                           ${deptName} 
                         </h1>
 						<ol class="breadcrumb">
 						
@@ -212,25 +212,25 @@
 					<div class="card-image">
 					  <div class="collection">
 					  	<table>
-						  	<tr>
+						  	<tr height="65px">
 							  	 <td><a href="#!" class="collection-item">${qualList[0].word}<span class="new badge red" data-badge-caption="st">1</span></a></td>
 							  	 <td><a href="#!" class="collection-item">${prefList[0].word}<span class="new badge red" data-badge-caption="st">1</span></a></td>
 						  	</tr>
-						  	<tr>
-							  	 <td><a href="#!" class="collection-item">${qualList[1].word}<span class="badge" data-badge-caption="nd">2</span></a></td>
-							  	 <td><a href="#!" class="collection-item">${prefList[1].word}<span class="badge" data-badge-caption="nd">2</span></a></td>
+						  	<tr height="65px">
+							  	 <td><hr><a href="#!" class="collection-item">${qualList[1].word}<span class="badge" data-badge-caption="nd">2</span></a></td>
+							  	 <td><hr><a href="#!" class="collection-item">${prefList[1].word}<span class="badge" data-badge-caption="nd">2</span></a></td>
 						  	</tr>
-						  	<tr>
-							  	 <td><a href="#!" class="collection-item">${qualList[2].word}<span class="new badge" data-badge-caption="rd">3</span></a></td>
-							  	 <td><a href="#!" class="collection-item">${prefList[2].word}<span class="new badge" data-badge-caption="rd">3</span></a></td>
+						  	<tr height="65px">
+							  	 <td><hr><a href="#!" class="collection-item">${qualList[2].word}<span class="new badge" data-badge-caption="rd">3</span></a></td>
+							  	 <td><hr><a href="#!" class="collection-item">${prefList[2].word}<span class="new badge" data-badge-caption="rd">3</span></a></td>
 						  	</tr>
-						  	<tr>
-							  	 <td><a href="#!" class="collection-item">${qualList[3].word}<span class="new badge blue" data-badge-caption="th">4</span></a></td>
-							  	 <td><a href="#!" class="collection-item">${prefList[3].word}<span class="new badge blue" data-badge-caption="th">4</span></a></td>
+						  	<tr height="65px">
+							  	 <td><hr><a href="#!" class="collection-item">${qualList[3].word}<span class="new badge blue" data-badge-caption="th">4</span></a></td>
+							  	 <td><hr><a href="#!" class="collection-item">${prefList[3].word}<span class="new badge blue" data-badge-caption="th">4</span></a></td>
 						  	</tr>
-						  	<tr>
-							  	 <td><a href="#!" class="collection-item">${qualList[4].word}<span class="new badge red" data-badge-caption="th">5</span></a></td>
-							  	 <td><a href="#!" class="collection-item">${prefList[4].word}<span class="new badge red" data-badge-caption="th">5</span></a></td>
+						  	<tr height="65px">
+							  	 <td><hr><a href="#!" class="collection-item">${qualList[4].word}<span class="new badge pink" data-badge-caption="th">5</span></a></td>
+							  	 <td><hr><a href="#!" class="collection-item">${prefList[4].word}<span class="new badge pink" data-badge-caption="th">5</span></a></td>
 						  	</tr>
 					  	</table>
 						</div>
@@ -247,7 +247,7 @@
 										  <div id="morris-donut-chart"></div>
 										</div> 
 										<div class="card-action">
-										  <b>Donut Chart Example</b>
+										  <b>경력 조건</b>
 										  <script language=javascript>
 										  
 										  var WE2 = '${exep[0].word}';
@@ -265,22 +265,7 @@
 									</div>	
 								</div>
 							 </div> 
-						</div><!--/.row-->
-					
-					 
-		  
-				<!-- <div class="row">
-				<div class="col-md-5"> 
-						<div class="card">
-						<div class="card-image">
-						 <div id="morris-line-chart"></div>
-						</div> 
-						<div class="card-action">
-						  <b>Line Chart</b>
 						</div>
-						</div>
-		  
-					</div> -->
 					
 				 <div class="col-md-7"> 
 					<div class="card">
@@ -288,7 +273,7 @@
 					  <div id="morris-bar-chart"></div>
 					</div> 
 					<div class="card-action">
-					  <b> Bar Chart Example</b>
+					  <b> 직무 간 기술 비율 비교</b>
 					  
 					  <script language=javascript> 
 						  var fCount1 = ${firG[0].count};
@@ -315,91 +300,7 @@
 				</div>
 				
 			 
-				
-				
-            <!--     <div class="row">
-                    <div class="col-xs-12">
-						<div class="card">
-					<div class="card-image">
-					  <div id="morris-area-chart"></div>
-					</div> 
-					<div class="card-action">
-					  <b>Area Chart</b>
-					</div>
-					</div>	 
-                    </div> 
-
-                </div> -->
-				<div class="row">
-				<div class="col-md-12">
-				
-					</div>		
-				</div> 	
-                <!-- /. ROW  -->			
-                <div class="row">
-                    <div class="col-md-4 col-sm-12 col-xs-12">
-						<div class="card"><div class="card-action">
-					  <b>자격조건 순위</b>
-					  <b>우대사항 순위</b>
-					</div>
-					<div class="card-image">
-					  <div class="collection">
-					  	
-						  <a href="#!" class="collection-item">자격 조건<span class="new badge red" data-badge-caption="st">1</span></a>
-						  <a href="#!" class="collection-item">${qualList[0].word}<span class="new badge blue" data-badge-caption="blue">4</span></a>
-						  <a href="#!" class="collection-item"><span class="badge">1</span>Alan</a>
-							<a href="#!" class="collection-item"><span class="new badge">4</span>Alan</a>
-							<a href="#!" class="collection-item">Alan<span class="new badge blue" data-badge-caption="blue">4</span></a>
-							<a href="#!" class="collection-item"><span class="badge">14</span>Alan</a>
-							   <a href="#!" class="collection-item">Custom Badge Captions<span class="new badge" data-badge-caption="custom caption">4</span></a>
-							<a href="#!" class="collection-item">Custom Badge Captions<span class="badge" data-badge-caption="custom caption">4</span></a>
-						</div>
-					</div> 
-					
-					</div>	  
-
-                    </div>
-                    <div class="col-md-8 col-sm-12 col-xs-12">
-	<div class="card">
-	<div class="card-action">
-					  <b>User List</b>
-					</div>
-					<div class="card-image">
-					  <ul class="collection">
-    <li class="collection-item avatar">
-      <i class="material-icons circle green">track_changes</i>
-      <span class="title">Title</span>
-      <p>First Line <br>
-         Second Line
-      </p>
-      <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
-    </li>
-    <li class="collection-item avatar">
-      <i class="material-icons circle">folder</i>
-      <span class="title">Title</span>
-      <p>First Line <br>
-         Second Line
-      </p>
-      <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
-    </li>
-    <li class="collection-item avatar">
-      <i class="material-icons circle green">track_changes</i>
-      <span class="title">Title</span>
-      <p>First Line <br>
-         Second Line
-      </p>
-      <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
-    </li>
-    <li class="collection-item avatar">
-      <i class="material-icons circle red">play_arrow</i>
-      <span class="title">Title</span>
-      <p>First Line <br>
-         Second Line
-      </p>
-      <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
-    </li>
-  </ul>
-</div>  
+			
 					</div>	 
 					
                        
@@ -407,24 +308,7 @@
                     </div>
                 </div>
                 </div>
-                <!-- /. ROW  -->
-			   <!-- <div class="fixed-action-btn horizontal click-to-toggle">
-    <a class="btn-floating btn-large red">
-      <i class="material-icons">menu</i>
-    </a>
-    <ul>
-      <li><a class="btn-floating red"><i class="material-icons">track_changes</i></a></li>
-      <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
-      <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
-      <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
-    </ul>
-  </div> -->
-		
-		<!-- 		<footer><p>Shared by <i class="fa fa-love"></i><a href="https://bootstrapthemes.co">BootstrapThemes</a>
-</p>
-				
-        
-				</footer> -->
+                
             </div>
             <!-- /. PAGE INNER  -->
         </div>

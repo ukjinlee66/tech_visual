@@ -23,7 +23,7 @@
 
 <body>
 
-	<!-- <img src = "assets/img/java-brands2.jpg"> -->
+	
      <div style = "background-color:#1F2837;">
       <div style= margin: 0 auto; ">
 		<div id="page-wrapper">
@@ -220,23 +220,23 @@
 					<div class="card-image">
 					  <div class="collection">
 					  	<table>
-						  	<tr height="65px">
+						  	<tr height="30px">
 							  	 <td><a href="#!" class="collection-item">${qualList[0].word}<span class="new badge red" data-badge-caption="st">1</span></a></td>
 							  	 <td><a href="#!" class="collection-item">${prefList[0].word}<span class="new badge red" data-badge-caption="st">1</span></a></td>
 						  	</tr>
-						  	<tr height="65px">
+						  	<tr height="30px">
 							  	 <td><hr><a href="#!" class="collection-item">${qualList[1].word}<span class="badge" data-badge-caption="nd">2</span></a></td>
 							  	 <td><hr><a href="#!" class="collection-item">${prefList[1].word}<span class="badge" data-badge-caption="nd">2</span></a></td>
 						  	</tr>
-						  	<tr height="65px">
+						  	<tr height="30px">
 							  	 <td><hr><a href="#!" class="collection-item">${qualList[2].word}<span class="new badge" data-badge-caption="rd">3</span></a></td>
 							  	 <td><hr><a href="#!" class="collection-item">${prefList[2].word}<span class="new badge" data-badge-caption="rd">3</span></a></td>
 						  	</tr>
-						  	<tr height="65px">
+						  	<tr height="30px">
 							  	 <td><hr><a href="#!" class="collection-item">${qualList[3].word}<span class="new badge blue" data-badge-caption="th">4</span></a></td>
 							  	 <td><hr><a href="#!" class="collection-item">${prefList[3].word}<span class="new badge blue" data-badge-caption="th">4</span></a></td>
 						  	</tr>
-						  	<tr height="65px">
+						  	<tr height="30px">
 							  	 <td><hr><a href="#!" class="collection-item">${qualList[4].word}<span class="new badge pink" data-badge-caption="th">5</span></a></td>
 							  	 <td><hr><a href="#!" class="collection-item">${prefList[4].word}<span class="new badge pink" data-badge-caption="th">5</span></a></td>
 						  	</tr>

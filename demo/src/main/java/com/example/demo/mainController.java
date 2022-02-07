@@ -220,7 +220,7 @@ public class mainController {
 				"안드로이드 앱",
 				"아이폰 앱",
 				"머신러닝",
-				"인공지능(AI)",
+				"인공지능",
 				"데이터 엔지니어",
 				"모바일 게임",
 				"게임 클라이언트",
@@ -231,7 +231,7 @@ public class mainController {
 				"임베디드 소프트웨어",
 				"로보틱스 미들웨어",
 				"QA",
-				"사물인터넷(IoT)",
+				"사물인터넷",
 				"응용 프로그램",
 				"블록체인"};
 		boolean check = false;

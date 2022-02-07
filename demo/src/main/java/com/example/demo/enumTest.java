@@ -18,7 +18,7 @@ public class enumTest
 		AN("안드로이드 앱"),
 		IOS("아이폰 앱"),
 		ML("머신러닝"),
-		AI("인공지능(AI)"),
+		AI("인공지능"),
 		MG("모바일 게임"),
 		GC("게임 클라이언트"),
 		GS("게임 서버"),
@@ -28,7 +28,7 @@ public class enumTest
 		EM("임베디드 소프트웨어"),
 		RB("로보틱스 미들웨어"),
 		QA("QA"),
-		IO("사물인터넷(IoT)"),
+		IO("사물인터넷"),
 		EX("응용 프로그램"),
 		BC("블록체인");
 		private String DBname;

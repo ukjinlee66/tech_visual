@@ -34,6 +34,10 @@ public class jobServiceImpl implements JobService {
         return jobList;
     }
     
+    public String getCollName(){
+    	
+    	return collectionName;
+    }
     
     @Override
 	public String getCollectionName()

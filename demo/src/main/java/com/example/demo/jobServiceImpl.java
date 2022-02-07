@@ -34,29 +34,24 @@ public class jobServiceImpl implements JobService {
         return jobList;
     }
     
-    public String getCollName(){
-    	
-    	return collectionName;
-    }
     
     @Override
-   	public String getCollectionName()
-   	{
-   		return collectionName;
-   	}
-   	
-   	@Override
-   	public void setCollectionName(String collectionName)
-   	{
-   		this.collectionName = collectionName;
-   	}
-   	
+	public String getCollectionName()
+	{
+		return collectionName;
+	}
+	
+	@Override
+	public void setCollectionName(String collectionName)
+	{
+		this.collectionName = collectionName;
+	}
+	
 
-   	@Override
-   	public List<Notice> getdeptList(String dept)
-   	{
-   		List<Notice> deptList = econ.findBydept(dept);
-   		return deptList;
-   	}
-
+	@Override
+	public List<Notice> getdeptList(String dept)
+	{
+		List<Notice> deptList = econ.findBydept(dept);
+		return deptList;
+	}
 }

@@ -1,7 +1,5 @@
 package com.example.demo;
 
-import java.io.PrintWriter;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
@@ -84,14 +82,7 @@ public class mainController {
 		model.addAttribute("tech_two_name", te2);
 		model.addAttribute("tech_three_name", te3);
 
-		/*
-		 * jobService.setCollectionName("TT");
-		 * 
-		 * List<jobData> tt_list = jobService.getJobList();
-		 * 
-		 * Collections.sort(tt_list, comp); // session에 저장
-		 * model.addAttribute("sessionTT", tt_list); // 전체 직무.
-		 */
+
 		
 		  //첫화면에 보여줄 DE정보 불러오기
 		  jobService.setCollectionName("DEQ"); 

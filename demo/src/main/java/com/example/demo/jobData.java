@@ -14,7 +14,6 @@ public class jobData {
 	
 	@Id
 	private String id;
-	//private String SS;
 	private String word;
 	private String count;
 	
@@ -23,15 +22,4 @@ public class jobData {
 		this.word = word;
 		this.count = count;
 	}
-	/*
-    private String company;
-    private String dept;
-    private String tech;
-    private String qual;
-    private String prefer;
-    
-    */
-    
-    
-
 }

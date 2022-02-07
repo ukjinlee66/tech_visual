@@ -4,8 +4,13 @@
     http://creativecommons.org/licenses/by/3.0/
 ---------------------------------------------------------  */
 
+
+
 (function ($) {
     "use strict";
+   
+    
+    
     var mainApp = {
 
         initFunction: function () {
@@ -20,6 +25,7 @@
                     $('div.sidebar-collapse').removeClass('collapse')
                 }
             });
+
             /* MORRIS BAR CHART
 			-----------------------------------------*/
             Morris.Bar({
@@ -47,7 +53,7 @@
                 }],
                 xkey: 'y',
                 ykeys: ['a', 'b'],
-                labels: [ fWord1, fWord2 ],
+                labels: [fWord1, fWord2],
 				 barColors: [
     '#e96562','#414e63',
     '#A8E9DC' 
@@ -58,23 +64,31 @@
 	 
 
 
+
             /* MORRIS DONUT CHART
 			----------------------------------------*/
+			
             Morris.Donut({
                 element: 'morris-donut-chart',
                 data: [{
-                    label: "Profits",
-                    value: 12
+                    label: "경력무관",
+                    value: CE1
                 }, {
-                    label: "Users",
-                    value: 30
+                    label: "최소"+WE2+"년",
+                    value: CE2
                 }, {
-                    label: "Total Sales",
-                    value: 20
+                    label: "최소"+WE3+"년",
+                    value: CE3
+                }, {
+                    label: "최소"+WE4+"년",
+                    value: CE4
+                }, {
+                    label: "최소"+WE5+"년",
+                    value: CE5
                 }],
 				   colors: [
-    '#A6A6A6','#414e63',
-    '#e96562' 
+    '#ddeecc','#eecccc',
+    '#cceeee','#ddccee','#eeccd4' 
   ],
                 resize: true
             });

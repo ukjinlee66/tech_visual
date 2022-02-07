@@ -15,32 +15,48 @@ import org.springframework.stereotype.Service;
 @Component("job")
 public class jobServiceImpl implements JobService {
 	
+	
+	
+	
 	@Autowired
     private jobRepository jRepository;
 	
-	private static String collName = "job";
+	@Autowired
+	private enRepositoryCustom econ;
 	
 	
-	public String getCollName() {
-		return collName;
-	}
 	
-	public void setCollName(String collName) {
-		
-		this.collName = collName;
-	}
-	
-	
-	public Optional<jobData> getJob(String id){
-        
-		Optional<jobData> get = jRepository.findById(id);
-		
-        return get;
-    }
+	private static String collectionName = "DE";
+
 
     public List<jobData> getJobList(){
         List<jobData> jobList = jRepository.findAll();
         return jobList;
     }
+    
+    public String getCollName(){
+    	
+    	return collectionName;
+    }
+    
+    @Override
+   	public String getCollectionName()
+   	{
+   		return collectionName;
+   	}
+   	
+   	@Override
+   	public void setCollectionName(String collectionName)
+   	{
+   		this.collectionName = collectionName;
+   	}
+   	
+
+   	@Override
+   	public List<Notice> getdeptList(String dept)
+   	{
+   		List<Notice> deptList = econ.findBydept(dept);
+   		return deptList;
+   	}
 
 }

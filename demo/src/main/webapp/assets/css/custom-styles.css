@@ -17,18 +17,18 @@ body {
     width: 100%;
 }
 
-#page-wrapper {
+ #page-wrapper {
     padding: 15px 15px;
     min-height: 600px;
     background: #ececec;
-}
-#page-inner {
+} 
+ #page-inner {
     width:100%;
     margin:10px 20px 10px 0px;
     padding: 15px 30px;
     min-height:1200px;
-}
-.header .container-fluid{
+} 
+ .header .container-fluid{
 padding:0;
 }
 .text-center {
@@ -47,18 +47,18 @@ h2 {
 }
 h4 {
     padding-top:10px;
-}
+} 
 .square-btn-adjust {
     border: 0px solid transparent; 
    -webkit-border-radius: 0px;
 -moz-border-radius: 0px;
 border-radius: 0px;
 
-}
-p {
+} 
+ p {
     font-size: 14px;
     line-height:25px;
-    /* padding-top:20px; */
+    padding-top:20px;
 }
 label {
     display: inline-block;
@@ -68,11 +68,11 @@ label {
 }
 .alert { 
     border-radius: 0px;
-}
-.navbar-side {
+} 
+/* .navbar-side {
     z-index: 0; 
-}
-.panel{
+} */
+ .panel{
 border-radius:0px;
 }
 .navbar-side .nav > li > a > i{color: rgba(255, 255, 255, 0.62);padding: 8px;width: 20px;text-align: center;font-size: 14px;}
@@ -87,17 +87,17 @@ border-radius:0px;
 #page-wrapper {
   position: relative;
   top: 55px;
-  /* box-shadow: 0 0 10px #757575; */
+  box-shadow: 0 0 10px #757575;
   -moz-box-shadow: 0 0 10px #757575;
-  /* -webkit-box-shadow: 0 0 10px #757575; */
-}
-.top-navbar .nav > li > a:hover, .top-navbar .nav > li > a:focus {text-decoration: none;background-color: #e0e8f5;color: #fff;}
+  -webkit-box-shadow: 0 0 10px #757575;
+} 
+ .top-navbar .nav > li > a:hover, .top-navbar .nav > li > a:focus {text-decoration: none;background-color: #e0e8f5;color: #fff;}
 .nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
 background-color: #075CB3;
 border-color: #075CB3;
-}
-.breadcrumb {padding: 10px 10px 10px 20px;margin-bottom: 0;list-style: none;border-radius: 0;/* -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05); *//* box-shadow: 0 1px 1px rgba(0,0,0,.05); */background: transparent;line-height: 20px;font-size: 13px;margin-left: 14px;}
-.dropdown-menu>li>a {
+} 
+/* .breadcrumb {padding: 10px 10px 10px 20px;margin-bottom: 0;list-style: none;border-radius: 0;-webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05); *//* box-shadow: 0 1px 1px rgba(0,0,0,.05);background: transparent;line-height: 20px;font-size: 13px;margin-left: 14px;} */
+ .dropdown-menu>li>a {
   display: block;
   padding: 3px 20px;
   clear: both;
@@ -116,7 +116,7 @@ border-color: #075CB3;
 .badge {
   display: inline-block;
   min-width: 10px;
-  /* padding: 4px 7px; */
+  padding: 4px 7px;
   font-size: 11px;
   font-weight: 300;
   color: #fff;
@@ -125,7 +125,7 @@ border-color: #075CB3;
   vertical-align: baseline;
   background-color: #F09B22;
   border-radius: 10px;
-}
+} 
 .closed{
 	-ms-transform: rotate(180deg); /* IE 9 */
     -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
@@ -135,11 +135,11 @@ border-color: #075CB3;
 /*----------------------------------------------
    DASHBOARD STYLES    
 ------------------------------------------------*/
-.page-header {padding-bottom: 0;margin: 0;border-bottom: 1px solid transparent;text-align: left;background-color: transparent;padding: 32px 22px 10px 28px;color: #323232;}
+ .page-header {padding-bottom: 0;margin: 0;border-bottom: 1px solid transparent;text-align: left;background-color: transparent;padding: 32px 22px 10px 28px;color: #323232;}
 .panel-left{  
 width: 100px;
-height: 100px;background: #0866C6;/* border: 2px solid #4590DA; */
-/* border-radius: 100%; */
+height: 100px;background: #0866C6;border: 2px solid #4590DA;
+border-radius: 100%;
 overflow: hidden;
 
 margin: 12px;}
@@ -173,7 +173,7 @@ font-weight:bold;background: #FFFFFF;
 font-size: 16px;
 text-shadow: none;}
 .panel-heading {
-  /* padding: 15px 15px 0px; */
+  padding: 15px 15px 0px;
   border-bottom: 1px solid transparent;
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
@@ -224,7 +224,7 @@ margin-bottom: 30px;
 width:100%;
 }
 .green {
-/* background-color: #1CC09F; */
+background-color: #1CC09F;
 color: #fff;
 }
  .blue {background-color: #FFFFFF;color: #002A4C;}
@@ -287,8 +287,8 @@ color:#fff;
 font-size: 16px;
 line-height: 30px;
 }
-     /*CHAT PANEL*/
-/*Charts*/
+     CHAT PANEL
+Charts
 
 .main-chart {
 	background: #fff;
@@ -356,11 +356,11 @@ color: #8d8888;
 }
 footer p{
 font-size: 14px;
-}
+} 
 /*----------------------------------------------
     MENU STYLES    
 ------------------------------------------------*/
-div#sideNav:hover {
+ div#sideNav:hover {
     color: #1f2837;
 }
 .user-image {
@@ -374,7 +374,7 @@ max-width:170px;
 .top-navbar{
 margin:0px;
 }
-.top-navbar .navbar-brand {color: #fff;width: 260px;text-align: left;height: 60px;font-size: 24px;font-weight: 700;/* text-transform: uppercase; */line-height: 30px;background: #f44336;}
+.top-navbar .navbar-brand {color: #fff;width: 260px;text-align: left;height: 60px;font-size: 24px;font-weight: 700;text-transform: uppercase;line-height: 30px;background: #f44336;}
 .navbar-brand b{
 color: #4BD28C;
 }
@@ -546,7 +546,7 @@ ul.dropdown-menu.dropdown-messages li a div {
 	text-transform:uppercase;
 }
 .collection .collection-item{
-	padding: 16px 20px;
+	padding: 16px 20px; 
 }
 /*----------------------------------------------
     UI ELEMENTS STYLES     
@@ -567,12 +567,12 @@ line-height: 1.428571429;
     MEDIA QUERIES     
 ------------------------------------------------*/
  
- @media(min-width:768px) {
+ /*  @media(min-width:768px) {
      #page-wrapper{
                margin: 0 0 0 260px;
                padding: 0;
                min-height: 1200px;
-    }
+    } */
 	
 	
     .navbar-side {
@@ -607,13 +607,13 @@ font-size: 19px;
 #sideNav{
 	display:none;
 }
-.panel-left {
+/* .panel-left {
   width: 85px;
   height: 85px; 
   border-radius: 100%;
   overflow: hidden;
   margin: 14px;
-}
+} */
 }
 .dropdown-content{
     min-width: 165px !important;
@@ -637,7 +637,7 @@ font-size: 19px;
 }
 .dropdown-content li>a{
 	font-size: 12px;
-	/* margin: 0 4px; */
+	margin: 0 4px;
 	padding: 0;
 }
 .card.horizontal.cardIcon .card-image {
@@ -703,7 +703,7 @@ padding: 0 15px 0px 15px;
     padding-top: 5px;
     color: #f44336;
 }
- @media(max-width:768px) {
+/*  @media(max-width:768px) {
 	  
 	 .navbar-header {
 		background: #f44336;
@@ -736,5 +736,5 @@ padding: 0 15px 0px 15px;
 		}
 		.top-navbar .nav > li > a{
 			padding:17px 9px;
-		}
- }
+		} */
+ } 

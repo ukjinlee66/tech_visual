@@ -1,12 +1,17 @@
 package com.example.demo;
 
+import com.example.demo.enumTest.SearchEx1;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
-public class enumTest {
+public class enumTest 
+{
 	@Getter
 	@AllArgsConstructor
-	public enum SearchEx1 {
+	public enum SearchEx1 
+	{
+		DE("데이터 엔지니어"),
 		SB("서버/백엔드"),
 		FR("프론트엔드"),
 		PU("웹 풀스택"),
@@ -14,7 +19,6 @@ public class enumTest {
 		IOS("아이폰 앱"),
 		ML("머신러닝"),
 		AI("인공지능(AI)"),
-		DE("데이터 엔지니어"),
 		MG("모바일 게임"),
 		GC("게임 클라이언트"),
 		GS("게임 서버"),
@@ -29,24 +33,25 @@ public class enumTest {
 		BC("블록체인");
 		private String DBname;
 	}
-	public static SearchEx1 getDBCode(String DBname) {
-		for (SearchEx1 name : SearchEx1.values()) {
+	public static String getDBCode(String search_key) 
+	{
+		for (SearchEx1 name : SearchEx1.values()) 
+		{
 			System.out.println(name.getDBname());
-			return name;
+			if(name.getDBname().equals(search_key)) 
+			{
+				return name.toString();
+			}
 		} 
 		return null; 
 	}
-	
-	public static void main(String[] args) {
+	public static String exchangeDBCode(String DBname) {
 		for (SearchEx1 name : SearchEx1.values()) {
-//			if(name.getDBname().equals(검색어)) {
-//				return name;
-//			}
-//			System.out.println(name);
-			System.out.println(name.getDBname());
+			if (name.toString().equals(DBname)) {
+				return name.getDBname(); 
+			} 
 		} 
-		
-
+		return null; 
 	}
 
 }

@@ -157,46 +157,49 @@ public class mainController {
 	      String tec2 = de_list.get(1).getWord();
 		  
 		  model.addAttribute("firG", de_list);
-	      	
-	      	deptGr[4] = "DE";
-	      		
-	      	int tmp_i = 0; 
-			int tmp_j = 0;
-			
-	      	while(true) { 
-				if(tmp_j == 4) {
-					break;
-				}
-				else if(!deptName[tmp_i].equals("DE")) {
-					deptGr[tmp_j] = deptName[tmp_i];
-					jobService.setCollectionName(deptName[tmp_i]);
-					
-					de_list = jobrepo.findByWord(tec1);
-					Collections.sort(de_list, comp);
-					model.addAttribute(modelName[tmp_j]+"F", de_list);
-					
-					de_list = jobrepo.findByWord(tec2);
-					Collections.sort(de_list, comp);
-					model.addAttribute(modelName[tmp_j]+"S", de_list);
+		  enumTest en = new enumTest();
 
-					tmp_i++;
-					tmp_j++;
-				}
-				else {
-					tmp_i++;
-					continue;
-				}
+	      String inName = en.exchangeDBCode("DE");
+	      deptGr[4] = inName;	
+	      	
+	      int tmp_i = 0; 
+	      int tmp_j = 0;
+			
+	      while(true) { 
+			if(tmp_j == 4) {
+				break;
 			}
-			model.addAttribute("dName", deptGr);
+			else if(!deptName[tmp_i].equals("DE")) {
+				inName = en.exchangeDBCode(deptName[tmp_i]);
+				deptGr[tmp_j] = inName;
+				jobService.setCollectionName(deptName[tmp_i]);
+					
+				de_list = jobrepo.findByWord(tec1);
+				Collections.sort(de_list, comp);
+				model.addAttribute(modelName[tmp_j]+"F", de_list);
+					
+				de_list = jobrepo.findByWord(tec2);
+				Collections.sort(de_list, comp);
+				model.addAttribute(modelName[tmp_j]+"S", de_list);
+
+				tmp_i++;
+				tmp_j++;
+			}
+			else {
+				tmp_i++;
+				continue;
+			}
+		}
+		model.addAttribute("dName", deptGr);
 		  
 		  
 		  
 		  
-		  System.out.println("main 호출");
+		System.out.println("main 호출");
 		  
 		  
 		 
-			return "index";
+		return "index";
 		}
 
 	
@@ -286,7 +289,8 @@ public class mainController {
       	
 		model.addAttribute("firG", deptTech_list);
       	
-      	deptGr[4] = collName;
+      	String inName = en.exchangeDBCode(collName);
+	    deptGr[4] = inName;	
       		
       	int tmp_i = 0; 
 		int tmp_j = 0;
@@ -296,7 +300,8 @@ public class mainController {
 				break;
 			}
 			else if(!deptName[tmp_i].equals(collName)) {
-				deptGr[tmp_j] = deptName[tmp_i];
+				inName = en.exchangeDBCode(deptName[tmp_i]);
+				deptGr[tmp_j] = inName;
 				jobService.setCollectionName(deptName[tmp_i]);
 				
 				deptTech_list = jobrepo.findByWord(tec1);

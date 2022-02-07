@@ -134,6 +134,14 @@
 							  	 <td><a href="#!" class="collection-item">${sessionTQ[2].word}<span class="new badge" data-badge-caption="rd">3</span></a></td>
 							  	 <td><a href="#!" class="collection-item">${sessionTP[2].word}<span class="new badge" data-badge-caption="rd">3</span></a></td>
 						  	</tr>
+						  	<tr>
+							  	 <td><a href="#!" class="collection-item">${sessionTQ[3].word}<span class="new badge blue" data-badge-caption="th">4</span></a></td>
+							  	 <td><a href="#!" class="collection-item">${sessionTP[3].word}<span class="new badge blue" data-badge-caption="th">4</span></a></td>
+						  	</tr>
+						  	<tr>
+							  	 <td><a href="#!" class="collection-item">${sessionTQ[4].word}<span class="new badge pink" data-badge-caption="th">5</span></a></td>
+							  	 <td><a href="#!" class="collection-item">${sessionTP[4].word}<span class="new badge pink" data-badge-caption="th">5</span></a></td>
+						  	</tr>
 						</table>
 						</div>
 					</div> 

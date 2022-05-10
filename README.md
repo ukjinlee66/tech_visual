@@ -46,7 +46,7 @@ IT시장을 기반으로 직군별 기술, 우대사항, 자격조건, 요구경
 
 ### 📂설치 파일 및 버전
 - Spring Tool Suite 3.9.14 version
-- Spring Boot 2.5.9 version
+- Spring Boot 2.6.2 version
 - MongoDB 5.0.5 version
 - Hadoop 3.2.2 version
 - Python 3.9 version

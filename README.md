@@ -55,3 +55,4 @@ IT시장을 기반으로 직군별 기술, 우대사항, 자격조건, 요구경
 ### 📚Reference
 - MongoDB - [https://www.mongodb.com/docs/manual/core/document/]<br>
 - Hadoop MapReduce tutorial - [https://hadoop.apache.org/docs/r1.2.1/mapred_tutorial.html]<br>
+- Spring Data MongoDB - [https://docs.spring.io/spring-data/mongodb/docs/current/reference/html]

@@ -1,9 +1,9 @@
-# IlDa Tech Visual Website
+# Tech Visual Website
 
 Encore Playdata Bigdata Engineer - Mini Project 02
 
 <p align="center">
-<img src="/asset/Miniproject2_techvisual.gif" width="600" height="400" >
+<img src="/asset/Miniproject2_techvisual.gif" width="650" height="450" >
 </p>
 
 ### 🖥️프로젝트 주제
@@ -11,7 +11,7 @@ IT시장을 기반으로 직군별 기술, 우대사항, 자격조건, 요구경
 #
 
 ### 📆프로젝트 기간
-2021-01-26 ~ 2021-01-28
+2021-02-03 ~ 2021-02-07
 #
 
 ### 👨‍👨팀 소개

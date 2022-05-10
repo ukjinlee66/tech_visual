@@ -3,7 +3,7 @@
 Encore Playdata Bigdata Engineer - Mini Project 02
 
 <p align="center">
-<img src="/asset/Miniproject2_techvisual.gif" width="650" height="450" >
+<img src="/asset/Miniproject2_techvisual.gif" width="600" height="400" >
 </p>
 
 ### 🖥️프로젝트 주제

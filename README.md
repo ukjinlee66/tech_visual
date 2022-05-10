@@ -49,7 +49,7 @@ IT시장을 기반으로 직군별 기술, 우대사항, 자격조건, 요구경
 - Spring Boot 2.6.2 version
 - MongoDB 5.0.5 version
 - Hadoop 3.2.2 version
-- Python 3.9 version
+- Python 3.9.7 version
 #
 
 ### 📚Reference

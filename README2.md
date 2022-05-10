@@ -31,12 +31,14 @@ IT시장을 기반으로 직군별 기술, 우대사항, 자격조건, 요구경
 
 ### 🛠️기술 스택
 <p>
+  <img src="https://img.shields.io/badge/Spring Boot-6DB33F?style=flat-square&logo=Spring%20Boot&logoColor=white"/>
   <img src="https://img.shields.io/badge/Java-007396?style=flat-square&logo=Java&logoColor=white"/>
   <img src="https://img.shields.io/badge/Html-E34F26?style=flat-square&logo=Html5&logoColor=white"/>
   <img src="https://img.shields.io/badge/CSS-1572B6?style=flat-square&logo=CSS3&logoColor=white"/>
   <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=JavaScript&logoColor=black"/>
-  <img src="https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=MySQL&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=Python&logoColor=black"/>
+  <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=Python&logoColor=white"/>
+  <img src="https://img.shields.io/badge/MongoDB-E6E6E6?style=flat-square&logo=MongoDB&logoColor=47A248"/>
+  <img src="https://img.shields.io/badge/Apache Hadoop-66CCFF?style=flat-square&logo=Apache%20Hadoop&logoColor=black"/>
 </p>
 
 
@@ -44,13 +46,12 @@ IT시장을 기반으로 직군별 기술, 우대사항, 자격조건, 요구경
 
 ### 📂설치 파일 및 버전
 - Spring Tool Suite 3.9.14 version
+- Spring Boot 2.5.9 version
 - MongoDB 5.0.5 version
-- Hadoop 3.1.2 version
+- Hadoop 3.2.2 version
 - Python 3.9 version
 #
 
 ### 📚Reference
 - MongoDB - [https://www.mongodb.com/docs/manual/core/document/]<br>
 - Hadoop MapReduce tutorial - [https://hadoop.apache.org/docs/r1.2.1/mapred_tutorial.html]<br>
-- Source Tree basic concept - [https://coding-groot.tistory.com/135]<br>
-- MVC pattern 2 - [https://velog.io/@jsj3282/MVC-%ED%8C%A8%ED%84%B4-%EA%B5%AC%ED%98%841-%EB%AA%A8%EB%8D%B8-2-%EA%B5%AC%EC%A1%B0%EC%99%80-MVC-%ED%8C%A8%ED%84%B4]

@@ -15,10 +15,10 @@ IT시장을 기반으로 직군별 기술, 우대사항, 자격조건, 요구경
 #
 
 ### 👨‍👨팀 소개
-🙋🏼‍♂️이욱진 : Front-end / Back-end  
-🙋🏼‍♂️이용광 : Data Crawling / Data Preprocessing  
-🙋🏼‍♂️권건우 : DB / Front-end  
-🙋🏼‍♂️박태준 : Front-end / Back-end
+🙋🏼‍♂️[이욱진](https://github.com/ukjinlee66) : Front-end / Back-end  
+🙋🏼‍♂️[이용광](https://github.com/dldydrhkd) / Data Preprocessing  
+🙋🏼‍♂️[권건우](https://github.com/Geonw00) : DB / Front-end  
+🙋🏼‍♂️[박태준](https://github.com/ih-tjpark) : Front-end / Back-end
 #
 
 

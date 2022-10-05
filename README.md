@@ -1,7 +1,7 @@
 # Tech Visualize Website
 
 Encore Playdata Bigdata Engineer - Mini Project 02
-
+.
 <p align="center">
 <img src="/asset/Miniproject2_techvisual.gif" width="600" height="400" >
 </p>
